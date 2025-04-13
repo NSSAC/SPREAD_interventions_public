@@ -1,0 +1,41 @@
+#!/bin/bash
+# Rough script to regulate slurm jobs, so no more than 10,000 are pending at once (for single job submissions)
+speed=.1
+usr=`whoami`
+tsize=10000
+
+while [ 1 ];
+do
+   tstatus=`squeue -u $usr -o "%t" -h -r | wc -l`
+
+   if [[ $tstatus -ge $tsize ]]; then
+   echo -ne "\r\033[K|o            $tstatus total." #Cap: $rsize running and $qsize queue. Waiting ...";
+      sleep .5;
+   echo -ne "\r\033[K\ o           $tstatus total." #Cap: $rsize running and $qsize queue. Waiting ...";
+      sleep $speed;
+   echo -ne "\r\033[K\  o          $tstatus total." #Cap: $rsize running and $qsize queue. Waiting ...";
+      sleep $speed;
+   echo -ne "\r\033[K\   o         $tstatus total." #Cap: $rsize running and $qsize queue. Waiting ...";
+      sleep $speed;
+   echo -ne "\r\033[K\    o        $tstatus total." #Cap: $rsize running and $qsize queue. Waiting ...";
+      sleep $speed;
+   echo -ne "\r\033[K|     o       $tstatus total." #Cap: $rsize running and $qsize queue. Waiting ...";
+      sleep $speed;
+   echo -ne "\r\033[K|      o      $tstatus total." #Cap: $rsize running and $qsize queue. Waiting ...";
+      sleep $speed;
+   echo -ne "\r\033[K|       o     $tstatus total." #Cap: $rsize running and $qsize queue. Waiting ...";
+      sleep $speed;
+   echo -ne "\r\033[K|        o    $tstatus total." #Cap: $rsize running and $qsize queue. Waiting ...";
+      sleep $speed;
+   echo -ne "\r\033[K|         o   $tstatus total." #Cap: $rsize running and $qsize queue. Waiting ...";
+      sleep $speed;
+   echo -ne "\r\033[K|          _  $tstatus total." #Cap: $rsize running and $qsize queue. Waiting ...";
+   echo -ne "\r\033[K|          ^  $tstatus total." #Cap: $rsize running and $qsize queue. Waiting ...";
+      sleep $speed;
+   echo -ne "\r\033[K|          _  $tstatus total." #Cap: $rsize running and $qsize queue. Waiting ...";
+      sleep 1;
+   else
+      break;
+   fi
+done
+

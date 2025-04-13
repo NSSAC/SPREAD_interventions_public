@@ -1,0 +1,690 @@
+parent,child,parent_country,locality_name,child_country
+4128,561378,PH,Iligan,PH
+4128,561379,PH,Iligan,PH
+4128,562814,PH,Iligan,PH
+4128,562815,PH,Iligan,PH
+4128,562816,PH,Iligan,PH
+4128,562817,PH,Iligan,PH
+4128,562818,PH,Iligan,PH
+4128,562819,PH,Iligan,PH
+4128,564254,PH,Iligan,PH
+4128,564255,PH,Iligan,PH
+4128,564256,PH,Iligan,PH
+4128,564257,PH,Iligan,PH
+4128,564258,PH,Iligan,PH
+4128,565694,PH,Iligan,PH
+4128,565695,PH,Iligan,PH
+4128,565697,PH,Iligan,PH
+4128,565698,PH,Iligan,PH
+4128,567134,PH,Iligan,PH
+4128,567135,PH,Iligan,PH
+4128,567136,PH,Iligan,PH
+4128,568574,PH,Iligan,PH
+4128,568575,PH,Iligan,PH
+4128,568576,PH,Iligan,PH
+4203,594483,PH,Batangas,PH
+4203,594484,PH,Batangas,PH
+4203,594485,PH,Batangas,PH
+4203,594486,PH,Batangas,PH
+4203,594487,PH,Batangas,PH
+4203,595922,PH,Batangas,PH
+4203,595923,PH,Batangas,PH
+4203,595924,PH,Batangas,PH
+4203,595925,PH,Batangas,PH
+4203,595926,PH,Batangas,PH
+4203,595928,PH,Batangas,PH
+4203,597363,PH,Batangas,PH
+4203,597364,PH,Batangas,PH
+4203,597365,PH,Batangas,PH
+4203,597366,PH,Batangas,PH
+4203,597368,PH,Batangas,PH
+4203,598802,PH,Batangas,PH
+4203,598803,PH,Batangas,PH
+4203,598804,PH,Batangas,PH
+4203,598805,PH,Batangas,PH
+4203,598806,PH,Batangas,PH
+4203,598807,PH,Batangas,PH
+4203,598808,PH,Batangas,PH
+4203,600243,PH,Batangas,PH
+4203,600244,PH,Batangas,PH
+4203,600245,PH,Batangas,PH
+4203,600246,PH,Batangas,PH
+4203,600247,PH,Batangas,PH
+4122,557062,PH,Davao,PH
+4122,557063,PH,Davao,PH
+4122,557065,PH,Davao,PH
+4122,557066,PH,Davao,PH
+4122,558500,PH,Davao,PH
+4122,558501,PH,Davao,PH
+4122,558502,PH,Davao,PH
+4122,558503,PH,Davao,PH
+4122,558505,PH,Davao,PH
+4122,558506,PH,Davao,PH
+4122,559940,PH,Davao,PH
+4122,559941,PH,Davao,PH
+4122,559942,PH,Davao,PH
+4122,559943,PH,Davao,PH
+4122,559944,PH,Davao,PH
+4122,559945,PH,Davao,PH
+4122,559946,PH,Davao,PH
+4122,561380,PH,Davao,PH
+4122,561381,PH,Davao,PH
+4122,561382,PH,Davao,PH
+4122,561383,PH,Davao,PH
+4122,561384,PH,Davao,PH
+4122,561385,PH,Davao,PH
+4122,561386,PH,Davao,PH
+4122,562821,PH,Davao,PH
+4122,562822,PH,Davao,PH
+4122,562823,PH,Davao,PH
+4122,562824,PH,Davao,PH
+4122,562825,PH,Davao,PH
+4122,562826,PH,Davao,PH
+4122,564262,PH,Davao,PH
+4122,564263,PH,Davao,PH
+4122,564264,PH,Davao,PH
+4122,564265,PH,Davao,PH
+4707,558488,PH,Zamboanga,PH
+4707,558489,PH,Zamboanga,PH
+4707,558490,PH,Zamboanga,PH
+4707,559928,PH,Zamboanga,PH
+4707,559929,PH,Zamboanga,PH
+4707,559930,PH,Zamboanga,PH
+4707,561368,PH,Zamboanga,PH
+4707,561369,PH,Zamboanga,PH
+4707,561370,PH,Zamboanga,PH
+4707,562809,PH,Zamboanga,PH
+4707,562810,PH,Zamboanga,PH
+4707,562811,PH,Zamboanga,PH
+4707,555608,PH,Zamboanga,PH
+4707,555609,PH,Zamboanga,PH
+4707,557047,PH,Zamboanga,PH
+4707,557048,PH,Zamboanga,PH
+4707,557049,PH,Zamboanga,PH
+4707,557050,PH,Zamboanga,PH
+4119,562820,PH,Cagayan de Oro,PH
+4119,564259,PH,Cagayan de Oro,PH
+4119,564260,PH,Cagayan de Oro,PH
+4119,564261,PH,Cagayan de Oro,PH
+4119,565699,PH,Cagayan de Oro,PH
+4119,565700,PH,Cagayan de Oro,PH
+4119,565701,PH,Cagayan de Oro,PH
+4119,565702,PH,Cagayan de Oro,PH
+4119,567138,PH,Cagayan de Oro,PH
+4119,567139,PH,Cagayan de Oro,PH
+4119,567140,PH,Cagayan de Oro,PH
+4119,567141,PH,Cagayan de Oro,PH
+4119,567142,PH,Cagayan de Oro,PH
+4119,568578,PH,Cagayan de Oro,PH
+4119,568580,PH,Cagayan de Oro,PH
+4119,568581,PH,Cagayan de Oro,PH
+4119,568582,PH,Cagayan de Oro,PH
+4119,570020,PH,Cagayan de Oro,PH
+4119,570021,PH,Cagayan de Oro,PH
+4119,570022,PH,Cagayan de Oro,PH
+4119,571459,PH,Cagayan de Oro,PH
+4119,571460,PH,Cagayan de Oro,PH
+4119,571461,PH,Cagayan de Oro,PH
+4308,590174,PH,Legazpi,PH
+4308,590175,PH,Legazpi,PH
+4308,590176,PH,Legazpi,PH
+4308,590177,PH,Legazpi,PH
+4308,590178,PH,Legazpi,PH
+4308,591613,PH,Legazpi,PH
+4308,591614,PH,Legazpi,PH
+4308,591615,PH,Legazpi,PH
+4308,591616,PH,Legazpi,PH
+4308,591617,PH,Legazpi,PH
+4308,591618,PH,Legazpi,PH
+4308,591619,PH,Legazpi,PH
+4308,593055,PH,Legazpi,PH
+4308,593057,PH,Legazpi,PH
+4308,594494,PH,Legazpi,PH
+4308,594495,PH,Legazpi,PH
+4308,594496,PH,Legazpi,PH
+4308,595935,PH,Legazpi,PH
+4308,595936,PH,Legazpi,PH
+4308,595937,PH,Legazpi,PH
+4308,597376,PH,Legazpi,PH
+4308,597377,PH,Legazpi,PH
+4308,597378,PH,Legazpi,PH
+4308,598816,PH,Legazpi,PH
+4308,598818,PH,Legazpi,PH
+4308,598817,PH,Legazpi,PH
+4527,574334,PH,Cebu,PH
+4527,574336,PH,Cebu,PH
+4527,574337,PH,Cebu,PH
+4527,574338,PH,Cebu,PH
+4527,575774,PH,Cebu,PH
+4527,575775,PH,Cebu,PH
+4527,575776,PH,Cebu,PH
+4527,575777,PH,Cebu,PH
+4527,575778,PH,Cebu,PH
+4527,575779,PH,Cebu,PH
+4527,577215,PH,Cebu,PH
+4527,577216,PH,Cebu,PH
+4527,577217,PH,Cebu,PH
+4527,577218,PH,Cebu,PH
+4527,577219,PH,Cebu,PH
+4527,578654,PH,Cebu,PH
+4527,578655,PH,Cebu,PH
+4527,578656,PH,Cebu,PH
+4527,578659,PH,Cebu,PH
+4527,580096,PH,Cebu,PH
+4527,580097,PH,Cebu,PH
+4527,581535,PH,Cebu,PH
+4527,581536,PH,Cebu,PH
+4527,581537,PH,Cebu,PH
+4527,581538,PH,Cebu,PH
+4527,582975,PH,Cebu,PH
+4527,582977,PH,Cebu,PH
+4527,582978,PH,Cebu,PH
+4125,557058,PH,General Santos,PH
+4125,557059,PH,General Santos,PH
+4125,557060,PH,General Santos,PH
+4125,557061,PH,General Santos,PH
+4125,549862,PH,General Santos,PH
+4125,551301,PH,General Santos,PH
+4125,551302,PH,General Santos,PH
+4125,551303,PH,General Santos,PH
+4125,552739,PH,General Santos,PH
+4125,552740,PH,General Santos,PH
+4125,552742,PH,General Santos,PH
+4125,552743,PH,General Santos,PH
+4125,554178,PH,General Santos,PH
+4125,554179,PH,General Santos,PH
+4125,554180,PH,General Santos,PH
+4125,554181,PH,General Santos,PH
+4125,554182,PH,General Santos,PH
+4125,554183,PH,General Santos,PH
+4125,555618,PH,General Santos,PH
+4125,555619,PH,General Santos,PH
+4125,555620,PH,General Santos,PH
+4125,555621,PH,General Santos,PH
+4125,555622,PH,General Santos,PH
+4125,555623,PH,General Santos,PH
+4377,601684,PH,Manila,PH
+4377,603123,PH,Manila,PH
+4377,603124,PH,Manila,PH
+4377,604564,PH,Manila,PH
+4494,601685,PH,Quezon City,PH
+4494,601686,PH,Quezon City,PH
+4494,601687,PH,Quezon City,PH
+4494,603125,PH,Quezon City,PH
+4494,603126,PH,Quezon City,PH
+4494,603127,PH,Quezon City,PH
+4494,603128,PH,Quezon City,PH
+4494,604565,PH,Quezon City,PH
+4494,604566,PH,Quezon City,PH
+4494,604567,PH,Quezon City,PH
+4494,604568,PH,Quezon City,PH
+4494,606006,PH,Quezon City,PH
+4494,606007,PH,Quezon City,PH
+4494,606008,PH,Quezon City,PH
+4188,607440,PH,Olongapo,PH
+4188,601682,PH,Olongapo,PH
+4188,603122,PH,Olongapo,PH
+4188,604561,PH,Olongapo,PH
+4188,604562,PH,Olongapo,PH
+4188,604563,PH,Olongapo,PH
+4188,606001,PH,Olongapo,PH
+4182,575770,PH,Iloilo,PH
+4182,575771,PH,Iloilo,PH
+4182,577211,PH,Iloilo,PH
+4182,578648,PH,Iloilo,PH
+4182,578649,PH,Iloilo,PH
+4182,578650,PH,Iloilo,PH
+4182,578651,PH,Iloilo,PH
+4182,580088,PH,Iloilo,PH
+4182,580089,PH,Iloilo,PH
+4182,580090,PH,Iloilo,PH
+4182,580091,PH,Iloilo,PH
+4182,581528,PH,Iloilo,PH
+4182,581529,PH,Iloilo,PH
+4182,581530,PH,Iloilo,PH
+4182,581531,PH,Iloilo,PH
+4182,582969,PH,Iloilo,PH
+4182,582970,PH,Iloilo,PH
+4182,582971,PH,Iloilo,PH
+4182,584409,PH,Iloilo,PH
+4182,584410,PH,Iloilo,PH
+4182,584411,PH,Iloilo,PH
+4140,575772,PH,Bacolod,PH
+4140,575773,PH,Bacolod,PH
+4140,577212,PH,Bacolod,PH
+4140,577213,PH,Bacolod,PH
+4140,578652,PH,Bacolod,PH
+4140,578653,PH,Bacolod,PH
+4140,580092,PH,Bacolod,PH
+4140,580093,PH,Bacolod,PH
+4140,580094,PH,Bacolod,PH
+4140,581533,PH,Bacolod,PH
+4140,581534,PH,Bacolod,PH
+4140,582972,PH,Bacolod,PH
+4140,582973,PH,Bacolod,PH
+4140,584412,PH,Bacolod,PH
+4140,584413,PH,Bacolod,PH
+4107,607441,PH,Angeles,PH
+4107,607442,PH,Angeles,PH
+4107,607443,PH,Angeles,PH
+4107,607444,PH,Angeles,PH
+4107,608884,PH,Angeles,PH
+4107,608885,PH,Angeles,PH
+4107,606003,PH,Angeles,PH
+4107,607445,PH,Angeles,PH
+4107,607446,PH,Angeles,PH
+4107,608880,PH,Angeles,PH
+4107,608881,PH,Angeles,PH
+4107,608882,PH,Angeles,PH
+4107,608883,PH,Angeles,PH
+4107,608886,PH,Angeles,PH
+4107,606002,PH,Angeles,PH
+4107,606004,PH,Angeles,PH
+4107,606005,PH,Angeles,PH
+4152,617523,PH,Baguio City,PH
+4152,611760,PH,Baguio City,PH
+4152,611761,PH,Baguio City,PH
+4152,611762,PH,Baguio City,PH
+4152,611763,PH,Baguio City,PH
+4152,611764,PH,Baguio City,PH
+4152,611765,PH,Baguio City,PH
+4152,611766,PH,Baguio City,PH
+4152,613200,PH,Baguio City,PH
+4152,613202,PH,Baguio City,PH
+4152,613203,PH,Baguio City,PH
+4152,613204,PH,Baguio City,PH
+4152,613205,PH,Baguio City,PH
+4152,613206,PH,Baguio City,PH
+4152,610320,PH,Baguio City,PH
+4152,610321,PH,Baguio City,PH
+4152,610322,PH,Baguio City,PH
+4152,610323,PH,Baguio City,PH
+4152,610324,PH,Baguio City,PH
+4152,610325,PH,Baguio City,PH
+4152,610326,PH,Baguio City,PH
+4152,614642,PH,Baguio City,PH
+4152,614643,PH,Baguio City,PH
+4152,614644,PH,Baguio City,PH
+4152,614645,PH,Baguio City,PH
+4152,614646,PH,Baguio City,PH
+4152,616082,PH,Baguio City,PH
+4152,616084,PH,Baguio City,PH
+4152,616085,PH,Baguio City,PH
+4152,616086,PH,Baguio City,PH
+4152,616083,PH,Baguio City,PH
+4152,617522,PH,Baguio City,PH
+4152,617524,PH,Baguio City,PH
+4152,617525,PH,Baguio City,PH
+4131,593053,PH,Naga,PH
+4131,594491,PH,Naga,PH
+4131,594492,PH,Naga,PH
+4131,594493,PH,Naga,PH
+4131,601691,PH,Naga,PH
+4131,601692,PH,Naga,PH
+4131,595930,PH,Naga,PH
+4131,595931,PH,Naga,PH
+4131,595933,PH,Naga,PH
+4131,595934,PH,Naga,PH
+4131,597370,PH,Naga,PH
+4131,597371,PH,Naga,PH
+4131,597372,PH,Naga,PH
+4131,597373,PH,Naga,PH
+4131,597374,PH,Naga,PH
+4131,598810,PH,Naga,PH
+4131,598811,PH,Naga,PH
+4131,598812,PH,Naga,PH
+4131,598813,PH,Naga,PH
+4131,600251,PH,Naga,PH
+4131,598814,PH,Naga,PH
+4131,598815,PH,Naga,PH
+4131,600250,PH,Naga,PH
+4131,600252,PH,Naga,PH
+4131,600254,PH,Naga,PH
+-1,557057,root,root,PH
+-1,590160,root,root,PH
+-1,590161,root,root,PH
+-1,590164,root,root,PH
+-1,590165,root,root,PH
+-1,590166,root,root,PH
+-1,590168,root,root,PH
+-1,590169,root,root,PH
+-1,590170,root,root,PH
+-1,590171,root,root,PH
+-1,590179,root,root,PH
+-1,590180,root,root,PH
+-1,590181,root,root,PH
+-1,590182,root,root,PH
+-1,623282,root,root,PH
+-1,623283,root,root,PH
+-1,623284,root,root,PH
+-1,623285,root,root,PH
+-1,623286,root,root,PH
+-1,623287,root,root,PH
+-1,623288,root,root,PH
+-1,623289,root,root,PH
+-1,623290,root,root,PH
+-1,558474,root,root,PH
+-1,558475,root,root,PH
+-1,558496,root,root,PH
+-1,558497,root,root,PH
+-1,558498,root,root,PH
+-1,558499,root,root,PH
+-1,591604,root,root,PH
+-1,591605,root,root,PH
+-1,591606,root,root,PH
+-1,591607,root,root,PH
+-1,591608,root,root,PH
+-1,591609,root,root,PH
+-1,591610,root,root,PH
+-1,591611,root,root,PH
+-1,591620,root,root,PH
+-1,591621,root,root,PH
+-1,591622,root,root,PH
+-1,624723,root,root,PH
+-1,624724,root,root,PH
+-1,624725,root,root,PH
+-1,624726,root,root,PH
+-1,624727,root,root,PH
+-1,624728,root,root,PH
+-1,624729,root,root,PH
+-1,624730,root,root,PH
+-1,559914,root,root,PH
+-1,559915,root,root,PH
+-1,559936,root,root,PH
+-1,559937,root,root,PH
+-1,559938,root,root,PH
+-1,559939,root,root,PH
+-1,559947,root,root,PH
+-1,593044,root,root,PH
+-1,593045,root,root,PH
+-1,593046,root,root,PH
+-1,626163,root,root,PH
+-1,626164,root,root,PH
+-1,626165,root,root,PH
+-1,626166,root,root,PH
+-1,561374,root,root,PH
+-1,561387,root,root,PH
+-1,594488,root,root,PH
+-1,594489,root,root,PH
+-1,627606,root,root,PH
+-1,627608,root,root,PH
+-1,562812,root,root,PH
+-1,562827,root,root,PH
+-1,595929,root,root,PH
+-1,629045,root,root,PH
+-1,629046,root,root,PH
+-1,629048,root,root,PH
+-1,564228,root,root,PH
+-1,564229,root,root,PH
+-1,564249,root,root,PH
+-1,564250,root,root,PH
+-1,564251,root,root,PH
+-1,564252,root,root,PH
+-1,564253,root,root,PH
+-1,564266,root,root,PH
+-1,597361,root,root,PH
+-1,630486,root,root,PH
+-1,630487,root,root,PH
+-1,630488,root,root,PH
+-1,565669,root,root,PH
+-1,565670,root,root,PH
+-1,565690,root,root,PH
+-1,565691,root,root,PH
+-1,565692,root,root,PH
+-1,565693,root,root,PH
+-1,565703,root,root,PH
+-1,565704,root,root,PH
+-1,565705,root,root,PH
+-1,565706,root,root,PH
+-1,598801,root,root,PH
+-1,598809,root,root,PH
+-1,631928,root,root,PH
+-1,567109,root,root,PH
+-1,567132,root,root,PH
+-1,567133,root,root,PH
+-1,567143,root,root,PH
+-1,567144,root,root,PH
+-1,567145,root,root,PH
+-1,567146,root,root,PH
+-1,600257,root,root,PH
+-1,600258,root,root,PH
+-1,568549,root,root,PH
+-1,568550,root,root,PH
+-1,568551,root,root,PH
+-1,568552,root,root,PH
+-1,568573,root,root,PH
+-1,568583,root,root,PH
+-1,568584,root,root,PH
+-1,568585,root,root,PH
+-1,568586,root,root,PH
+-1,601690,root,root,PH
+-1,569990,root,root,PH
+-1,569991,root,root,PH
+-1,569992,root,root,PH
+-1,569993,root,root,PH
+-1,570023,root,root,PH
+-1,570024,root,root,PH
+-1,570025,root,root,PH
+-1,570026,root,root,PH
+-1,603130,root,root,PH
+-1,571431,root,root,PH
+-1,571432,root,root,PH
+-1,571433,root,root,PH
+-1,571434,root,root,PH
+-1,571452,root,root,PH
+-1,571453,root,root,PH
+-1,571455,root,root,PH
+-1,571463,root,root,PH
+-1,571464,root,root,PH
+-1,571465,root,root,PH
+-1,571466,root,root,PH
+-1,604569,root,root,PH
+-1,637688,root,root,PH
+-1,572873,root,root,PH
+-1,572874,root,root,PH
+-1,572875,root,root,PH
+-1,572891,root,root,PH
+-1,572892,root,root,PH
+-1,572893,root,root,PH
+-1,572895,root,root,PH
+-1,572899,root,root,PH
+-1,572902,root,root,PH
+-1,572903,root,root,PH
+-1,572904,root,root,PH
+-1,639128,root,root,PH
+-1,574313,root,root,PH
+-1,574314,root,root,PH
+-1,574315,root,root,PH
+-1,574316,root,root,PH
+-1,574330,root,root,PH
+-1,574331,root,root,PH
+-1,574332,root,root,PH
+-1,574333,root,root,PH
+-1,574339,root,root,PH
+-1,574342,root,root,PH
+-1,574343,root,root,PH
+-1,574344,root,root,PH
+-1,574345,root,root,PH
+-1,575754,root,root,PH
+-1,575755,root,root,PH
+-1,575756,root,root,PH
+-1,575757,root,root,PH
+-1,575781,root,root,PH
+-1,575783,root,root,PH
+-1,575784,root,root,PH
+-1,575785,root,root,PH
+-1,608887,root,root,PH
+-1,577195,root,root,PH
+-1,577196,root,root,PH
+-1,577197,root,root,PH
+-1,577198,root,root,PH
+-1,577220,root,root,PH
+-1,577221,root,root,PH
+-1,577223,root,root,PH
+-1,577225,root,root,PH
+-1,610319,root,root,PH
+-1,610327,root,root,PH
+-1,545519,root,root,PH
+-1,578637,root,root,PH
+-1,578638,root,root,PH
+-1,578639,root,root,PH
+-1,578640,root,root,PH
+-1,578660,root,root,PH
+-1,578661,root,root,PH
+-1,578662,root,root,PH
+-1,578663,root,root,PH
+-1,611767,root,root,PH
+-1,611768,root,root,PH
+-1,636248,root,root,PH
+-1,636249,root,root,PH
+-1,546958,root,root,PH
+-1,546959,root,root,PH
+-1,546960,root,root,PH
+-1,580077,root,root,PH
+-1,580078,root,root,PH
+-1,580079,root,root,PH
+-1,580080,root,root,PH
+-1,580100,root,root,PH
+-1,580101,root,root,PH
+-1,580103,root,root,PH
+-1,580104,root,root,PH
+-1,613207,root,root,PH
+-1,613208,root,root,PH
+-1,613209,root,root,PH
+-1,548399,root,root,PH
+-1,548400,root,root,PH
+-1,548401,root,root,PH
+-1,548402,root,root,PH
+-1,581517,root,root,PH
+-1,581518,root,root,PH
+-1,581519,root,root,PH
+-1,581524,root,root,PH
+-1,581525,root,root,PH
+-1,581540,root,root,PH
+-1,581541,root,root,PH
+-1,581543,root,root,PH
+-1,581544,root,root,PH
+-1,614647,root,root,PH
+-1,614648,root,root,PH
+-1,614649,root,root,PH
+-1,614650,root,root,PH
+-1,549841,root,root,PH
+-1,549842,root,root,PH
+-1,582958,root,root,PH
+-1,582979,root,root,PH
+-1,582980,root,root,PH
+-1,582982,root,root,PH
+-1,582983,root,root,PH
+-1,582984,root,root,PH
+-1,616087,root,root,PH
+-1,616088,root,root,PH
+-1,616089,root,root,PH
+-1,616090,root,root,PH
+-1,551283,root,root,PH
+-1,584398,root,root,PH
+-1,584400,root,root,PH
+-1,584415,root,root,PH
+-1,584417,root,root,PH
+-1,584418,root,root,PH
+-1,584420,root,root,PH
+-1,584421,root,root,PH
+-1,584422,root,root,PH
+-1,584423,root,root,PH
+-1,617526,root,root,PH
+-1,617527,root,root,PH
+-1,617528,root,root,PH
+-1,617529,root,root,PH
+-1,617530,root,root,PH
+-1,617531,root,root,PH
+-1,552724,root,root,PH
+-1,552725,root,root,PH
+-1,552726,root,root,PH
+-1,552727,root,root,PH
+-1,585840,root,root,PH
+-1,585841,root,root,PH
+-1,585849,root,root,PH
+-1,585850,root,root,PH
+-1,585852,root,root,PH
+-1,585857,root,root,PH
+-1,585858,root,root,PH
+-1,585859,root,root,PH
+-1,585861,root,root,PH
+-1,585862,root,root,PH
+-1,618962,root,root,PH
+-1,618963,root,root,PH
+-1,618964,root,root,PH
+-1,618965,root,root,PH
+-1,618966,root,root,PH
+-1,618967,root,root,PH
+-1,618968,root,root,PH
+-1,618969,root,root,PH
+-1,618970,root,root,PH
+-1,554163,root,root,PH
+-1,554164,root,root,PH
+-1,554165,root,root,PH
+-1,554167,root,root,PH
+-1,554177,root,root,PH
+-1,587280,root,root,PH
+-1,587282,root,root,PH
+-1,587286,root,root,PH
+-1,587287,root,root,PH
+-1,587288,root,root,PH
+-1,587289,root,root,PH
+-1,587290,root,root,PH
+-1,587293,root,root,PH
+-1,587296,root,root,PH
+-1,587297,root,root,PH
+-1,587299,root,root,PH
+-1,587300,root,root,PH
+-1,587301,root,root,PH
+-1,587302,root,root,PH
+-1,620402,root,root,PH
+-1,620403,root,root,PH
+-1,620404,root,root,PH
+-1,620405,root,root,PH
+-1,620406,root,root,PH
+-1,620407,root,root,PH
+-1,620408,root,root,PH
+-1,620409,root,root,PH
+-1,555602,root,root,PH
+-1,555603,root,root,PH
+-1,555617,root,root,PH
+-1,555625,root,root,PH
+-1,588720,root,root,PH
+-1,588721,root,root,PH
+-1,588722,root,root,PH
+-1,588729,root,root,PH
+-1,588733,root,root,PH
+-1,588734,root,root,PH
+-1,588735,root,root,PH
+-1,588736,root,root,PH
+-1,588737,root,root,PH
+-1,588738,root,root,PH
+-1,588739,root,root,PH
+-1,588740,root,root,PH
+-1,588741,root,root,PH
+-1,588742,root,root,PH
+-1,621842,root,root,PH
+-1,621843,root,root,PH
+-1,621844,root,root,PH
+-1,621845,root,root,PH
+-1,621846,root,root,PH
+-1,621847,root,root,PH
+-1,621848,root,root,PH
+-1,621849,root,root,PH
+-1,4107,,root,PH
+-1,4119,,root,PH
+-1,4122,,root,PH
+-1,4125,,root,PH
+-1,4128,,root,PH
+-1,4131,,root,PH
+-1,4140,,root,PH
+-1,4152,,root,PH
+-1,4182,,root,PH
+-1,4188,,root,PH
+-1,4203,,root,PH
+-1,4308,,root,PH
+-1,4377,,root,PH
+-1,4494,,root,PH
+-1,4527,,root,PH
+-1,4707,,root,PH

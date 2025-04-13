@@ -1,0 +1,29 @@
+{
+    "input": {
+        "network": "../input/networks/ID",
+        "hierarchy": "../input/networks/ID/hierarchy.tree",
+        "seeding": "../input/seeding/seed_ID_radial.csv",
+        "intervention": ""
+    },
+    "batches": 1,
+    "simulations": 100,
+    "parameters": {
+        "model_parameters": {
+            "suitability_thresh": 0,
+            "exposure_delay": 2,
+            "alpha_S": [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100],
+            "alpha_L": 0.2,
+            "alpha_LD": [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100],
+            "kernel": "moore",
+            "kernel_parameters": 1
+        },
+        "simulation_parameters": {
+            "time_steps": 24,
+            "start_month": 5
+        }
+    },
+    "budget": [5,10],
+    "intervention_time": [3,6,12],
+    "random_seed": 1,
+    "prefix": "ID_"
+}

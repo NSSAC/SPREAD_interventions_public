@@ -1,0 +1,717 @@
+parent,child,parent_country,locality_name,child_country
+4845,595839,TH,Nonthaburi,TH
+4845,595840,TH,Nonthaburi,TH
+4845,597279,TH,Nonthaburi,TH
+4845,597280,TH,Nonthaburi,TH
+4845,597281,TH,Nonthaburi,TH
+4845,598719,TH,Nonthaburi,TH
+4845,598720,TH,Nonthaburi,TH
+4845,598721,TH,Nonthaburi,TH
+4845,598722,TH,Nonthaburi,TH
+4845,598723,TH,Nonthaburi,TH
+4845,600159,TH,Nonthaburi,TH
+4845,600160,TH,Nonthaburi,TH
+4845,600161,TH,Nonthaburi,TH
+4845,600162,TH,Nonthaburi,TH
+4845,600163,TH,Nonthaburi,TH
+4845,600164,TH,Nonthaburi,TH
+4845,601599,TH,Nonthaburi,TH
+4845,601600,TH,Nonthaburi,TH
+4845,601601,TH,Nonthaburi,TH
+4845,601602,TH,Nonthaburi,TH
+4845,601603,TH,Nonthaburi,TH
+4845,601604,TH,Nonthaburi,TH
+4845,601605,TH,Nonthaburi,TH
+4845,603040,TH,Nonthaburi,TH
+4845,603041,TH,Nonthaburi,TH
+4845,603042,TH,Nonthaburi,TH
+4845,603043,TH,Nonthaburi,TH
+4845,603044,TH,Nonthaburi,TH
+4797,558399,TH,Hat Yai,TH
+4797,558400,TH,Hat Yai,TH
+4797,558401,TH,Hat Yai,TH
+4797,558402,TH,Hat Yai,TH
+4797,558403,TH,Hat Yai,TH
+4797,558404,TH,Hat Yai,TH
+4797,558405,TH,Hat Yai,TH
+4797,559839,TH,Hat Yai,TH
+4797,559840,TH,Hat Yai,TH
+4797,559841,TH,Hat Yai,TH
+4797,559842,TH,Hat Yai,TH
+4797,559843,TH,Hat Yai,TH
+4797,559844,TH,Hat Yai,TH
+4797,561279,TH,Hat Yai,TH
+4797,561280,TH,Hat Yai,TH
+4797,561281,TH,Hat Yai,TH
+4797,561282,TH,Hat Yai,TH
+4797,561283,TH,Hat Yai,TH
+4797,562720,TH,Hat Yai,TH
+4797,562721,TH,Hat Yai,TH
+4797,562722,TH,Hat Yai,TH
+4797,556959,TH,Hat Yai,TH
+4797,556960,TH,Hat Yai,TH
+4797,556961,TH,Hat Yai,TH
+4797,556962,TH,Hat Yai,TH
+4797,556963,TH,Hat Yai,TH
+4797,556964,TH,Hat Yai,TH
+4797,556965,TH,Hat Yai,TH
+4761,623194,TH,Chiang Mai,TH
+4761,623195,TH,Chiang Mai,TH
+4761,623196,TH,Chiang Mai,TH
+4761,623197,TH,Chiang Mai,TH
+4761,623198,TH,Chiang Mai,TH
+4761,624633,TH,Chiang Mai,TH
+4761,624634,TH,Chiang Mai,TH
+4761,624635,TH,Chiang Mai,TH
+4761,624636,TH,Chiang Mai,TH
+4761,624637,TH,Chiang Mai,TH
+4761,624638,TH,Chiang Mai,TH
+4761,624639,TH,Chiang Mai,TH
+4761,626073,TH,Chiang Mai,TH
+4761,626074,TH,Chiang Mai,TH
+4761,626075,TH,Chiang Mai,TH
+4761,626076,TH,Chiang Mai,TH
+4761,626077,TH,Chiang Mai,TH
+4761,626078,TH,Chiang Mai,TH
+4761,626079,TH,Chiang Mai,TH
+4761,627513,TH,Chiang Mai,TH
+4761,627514,TH,Chiang Mai,TH
+4761,627515,TH,Chiang Mai,TH
+4761,627516,TH,Chiang Mai,TH
+4761,627517,TH,Chiang Mai,TH
+4761,627518,TH,Chiang Mai,TH
+4761,627519,TH,Chiang Mai,TH
+4761,628953,TH,Chiang Mai,TH
+4761,628954,TH,Chiang Mai,TH
+4761,628955,TH,Chiang Mai,TH
+4761,628956,TH,Chiang Mai,TH
+4761,628957,TH,Chiang Mai,TH
+4761,628958,TH,Chiang Mai,TH
+4761,628959,TH,Chiang Mai,TH
+4761,630393,TH,Chiang Mai,TH
+4761,630394,TH,Chiang Mai,TH
+4761,630395,TH,Chiang Mai,TH
+4761,630396,TH,Chiang Mai,TH
+4761,630397,TH,Chiang Mai,TH
+4761,630398,TH,Chiang Mai,TH
+4761,630399,TH,Chiang Mai,TH
+4761,631834,TH,Chiang Mai,TH
+4761,631835,TH,Chiang Mai,TH
+4761,631836,TH,Chiang Mai,TH
+4761,631837,TH,Chiang Mai,TH
+4761,631838,TH,Chiang Mai,TH
+-1,552645,root,Alor Setar,TH
+-1,554085,root,Alor Setar,TH
+-1,555524,root,Alor Setar,TH
+-1,555525,root,Alor Setar,TH
+-1,552646,root,Kota Baharu,TH
+-1,552648,root,Kota Baharu,TH
+-1,554086,root,Kota Baharu,TH
+-1,554087,root,Kota Baharu,TH
+-1,554088,root,Kota Baharu,TH
+-1,555526,root,Kota Baharu,TH
+-1,555527,root,Kota Baharu,TH
+-1,555528,root,Kota Baharu,TH
+-1,555529,root,Kota Baharu,TH
+-1,556966,root,Kota Baharu,TH
+-1,556967,root,Kota Baharu,TH
+-1,556968,root,Kota Baharu,TH
+4749,592961,TH,Bangkok,TH
+4749,592964,TH,Bangkok,TH
+4749,592965,TH,Bangkok,TH
+4749,594400,TH,Bangkok,TH
+4749,594401,TH,Bangkok,TH
+4749,594404,TH,Bangkok,TH
+4749,594405,TH,Bangkok,TH
+4749,594406,TH,Bangkok,TH
+4749,595841,TH,Bangkok,TH
+4749,595842,TH,Bangkok,TH
+4749,595845,TH,Bangkok,TH
+4749,595846,TH,Bangkok,TH
+4749,597282,TH,Bangkok,TH
+4749,597283,TH,Bangkok,TH
+4749,597284,TH,Bangkok,TH
+4749,597285,TH,Bangkok,TH
+4749,597286,TH,Bangkok,TH
+4749,598724,TH,Bangkok,TH
+4749,598725,TH,Bangkok,TH
+4749,598726,TH,Bangkok,TH
+4749,600165,TH,Bangkok,TH
+4749,600166,TH,Bangkok,TH
+4821,601607,TH,Nakhon Ratchasima,TH
+4821,601608,TH,Nakhon Ratchasima,TH
+4821,601609,TH,Nakhon Ratchasima,TH
+4821,601610,TH,Nakhon Ratchasima,TH
+4821,601611,TH,Nakhon Ratchasima,TH
+4821,603046,TH,Nakhon Ratchasima,TH
+4821,603047,TH,Nakhon Ratchasima,TH
+4821,603048,TH,Nakhon Ratchasima,TH
+4821,603049,TH,Nakhon Ratchasima,TH
+4821,603050,TH,Nakhon Ratchasima,TH
+4821,603051,TH,Nakhon Ratchasima,TH
+4821,603052,TH,Nakhon Ratchasima,TH
+4821,604486,TH,Nakhon Ratchasima,TH
+4821,604487,TH,Nakhon Ratchasima,TH
+4821,604488,TH,Nakhon Ratchasima,TH
+4821,604489,TH,Nakhon Ratchasima,TH
+4821,604490,TH,Nakhon Ratchasima,TH
+4821,604491,TH,Nakhon Ratchasima,TH
+4821,604492,TH,Nakhon Ratchasima,TH
+4821,605926,TH,Nakhon Ratchasima,TH
+4821,605927,TH,Nakhon Ratchasima,TH
+4821,605928,TH,Nakhon Ratchasima,TH
+4821,605929,TH,Nakhon Ratchasima,TH
+4821,605930,TH,Nakhon Ratchasima,TH
+4821,605931,TH,Nakhon Ratchasima,TH
+4821,605932,TH,Nakhon Ratchasima,TH
+4821,607366,TH,Nakhon Ratchasima,TH
+4821,607367,TH,Nakhon Ratchasima,TH
+4821,607368,TH,Nakhon Ratchasima,TH
+4821,607369,TH,Nakhon Ratchasima,TH
+4821,607370,TH,Nakhon Ratchasima,TH
+4821,607371,TH,Nakhon Ratchasima,TH
+4821,607372,TH,Nakhon Ratchasima,TH
+4821,608806,TH,Nakhon Ratchasima,TH
+4821,608807,TH,Nakhon Ratchasima,TH
+4821,608808,TH,Nakhon Ratchasima,TH
+4821,608809,TH,Nakhon Ratchasima,TH
+4821,608810,TH,Nakhon Ratchasima,TH
+4821,608811,TH,Nakhon Ratchasima,TH
+4821,608812,TH,Nakhon Ratchasima,TH
+4821,610247,TH,Nakhon Ratchasima,TH
+4821,610248,TH,Nakhon Ratchasima,TH
+4821,610249,TH,Nakhon Ratchasima,TH
+4821,610250,TH,Nakhon Ratchasima,TH
+4821,610251,TH,Nakhon Ratchasima,TH
+-1,590079,root,root,TH
+-1,590080,root,root,TH
+-1,590089,root,root,TH
+-1,590090,root,root,TH
+-1,590091,root,root,TH
+-1,623192,root,root,TH
+-1,623193,root,root,TH
+-1,623199,root,root,TH
+-1,623200,root,root,TH
+-1,623201,root,root,TH
+-1,623202,root,root,TH
+-1,623203,root,root,TH
+-1,623204,root,root,TH
+-1,623205,root,root,TH
+-1,558406,root,root,TH
+-1,558407,root,root,TH
+-1,591518,root,root,TH
+-1,591519,root,root,TH
+-1,591520,root,root,TH
+-1,591524,root,root,TH
+-1,591525,root,root,TH
+-1,591526,root,root,TH
+-1,591527,root,root,TH
+-1,591528,root,root,TH
+-1,591529,root,root,TH
+-1,591530,root,root,TH
+-1,624631,root,root,TH
+-1,624632,root,root,TH
+-1,624640,root,root,TH
+-1,624641,root,root,TH
+-1,624642,root,root,TH
+-1,624643,root,root,TH
+-1,624644,root,root,TH
+-1,559838,root,root,TH
+-1,592958,root,root,TH
+-1,592959,root,root,TH
+-1,592960,root,root,TH
+-1,592966,root,root,TH
+-1,592967,root,root,TH
+-1,592968,root,root,TH
+-1,592969,root,root,TH
+-1,592970,root,root,TH
+-1,626072,root,root,TH
+-1,626080,root,root,TH
+-1,626081,root,root,TH
+-1,626082,root,root,TH
+-1,626083,root,root,TH
+-1,626084,root,root,TH
+-1,626085,root,root,TH
+-1,561277,root,root,TH
+-1,561278,root,root,TH
+-1,594398,root,root,TH
+-1,594399,root,root,TH
+-1,594407,root,root,TH
+-1,594408,root,root,TH
+-1,594409,root,root,TH
+-1,594410,root,root,TH
+-1,627512,root,root,TH
+-1,627520,root,root,TH
+-1,627521,root,root,TH
+-1,627522,root,root,TH
+-1,627523,root,root,TH
+-1,627524,root,root,TH
+-1,627525,root,root,TH
+-1,562717,root,root,TH
+-1,562718,root,root,TH
+-1,562719,root,root,TH
+-1,595838,root,root,TH
+-1,595847,root,root,TH
+-1,595848,root,root,TH
+-1,595849,root,root,TH
+-1,628952,root,root,TH
+-1,628960,root,root,TH
+-1,628961,root,root,TH
+-1,628962,root,root,TH
+-1,628963,root,root,TH
+-1,628964,root,root,TH
+-1,628965,root,root,TH
+-1,564154,root,root,TH
+-1,564155,root,root,TH
+-1,564157,root,root,TH
+-1,564158,root,root,TH
+-1,564159,root,root,TH
+-1,564160,root,root,TH
+-1,564161,root,root,TH
+-1,564162,root,root,TH
+-1,597278,root,root,TH
+-1,597287,root,root,TH
+-1,597288,root,root,TH
+-1,597289,root,root,TH
+-1,597290,root,root,TH
+-1,630392,root,root,TH
+-1,630400,root,root,TH
+-1,630401,root,root,TH
+-1,630402,root,root,TH
+-1,630403,root,root,TH
+-1,630404,root,root,TH
+-1,630405,root,root,TH
+-1,565596,root,root,TH
+-1,565597,root,root,TH
+-1,565598,root,root,TH
+-1,565599,root,root,TH
+-1,565600,root,root,TH
+-1,565601,root,root,TH
+-1,565602,root,root,TH
+-1,598717,root,root,TH
+-1,598718,root,root,TH
+-1,598727,root,root,TH
+-1,598728,root,root,TH
+-1,598729,root,root,TH
+-1,598730,root,root,TH
+-1,598731,root,root,TH
+-1,631833,root,root,TH
+-1,631839,root,root,TH
+-1,631840,root,root,TH
+-1,631841,root,root,TH
+-1,631842,root,root,TH
+-1,567033,root,root,TH
+-1,567034,root,root,TH
+-1,567035,root,root,TH
+-1,567036,root,root,TH
+-1,567037,root,root,TH
+-1,567038,root,root,TH
+-1,567039,root,root,TH
+-1,567040,root,root,TH
+-1,567041,root,root,TH
+-1,567042,root,root,TH
+-1,600156,root,root,TH
+-1,600157,root,root,TH
+-1,600158,root,root,TH
+-1,600167,root,root,TH
+-1,600168,root,root,TH
+-1,600169,root,root,TH
+-1,600170,root,root,TH
+-1,600171,root,root,TH
+-1,600172,root,root,TH
+-1,633277,root,root,TH
+-1,633278,root,root,TH
+-1,633279,root,root,TH
+-1,633280,root,root,TH
+-1,633281,root,root,TH
+-1,633282,root,root,TH
+-1,568473,root,root,TH
+-1,568474,root,root,TH
+-1,568475,root,root,TH
+-1,568476,root,root,TH
+-1,568477,root,root,TH
+-1,568478,root,root,TH
+-1,568479,root,root,TH
+-1,568480,root,root,TH
+-1,568481,root,root,TH
+-1,601595,root,root,TH
+-1,601596,root,root,TH
+-1,601597,root,root,TH
+-1,601598,root,root,TH
+-1,601606,root,root,TH
+-1,601612,root,root,TH
+-1,601613,root,root,TH
+-1,601614,root,root,TH
+-1,601616,root,root,TH
+-1,601617,root,root,TH
+-1,601618,root,root,TH
+-1,601621,root,root,TH
+-1,634719,root,root,TH
+-1,634720,root,root,TH
+-1,634721,root,root,TH
+-1,634722,root,root,TH
+-1,569914,root,root,TH
+-1,569915,root,root,TH
+-1,569916,root,root,TH
+-1,569917,root,root,TH
+-1,569918,root,root,TH
+-1,569919,root,root,TH
+-1,569920,root,root,TH
+-1,603035,root,root,TH
+-1,603036,root,root,TH
+-1,603037,root,root,TH
+-1,603038,root,root,TH
+-1,603039,root,root,TH
+-1,603045,root,root,TH
+-1,603053,root,root,TH
+-1,603054,root,root,TH
+-1,603055,root,root,TH
+-1,603056,root,root,TH
+-1,603057,root,root,TH
+-1,603058,root,root,TH
+-1,603059,root,root,TH
+-1,603060,root,root,TH
+-1,603061,root,root,TH
+-1,603062,root,root,TH
+-1,636160,root,root,TH
+-1,571353,root,root,TH
+-1,571354,root,root,TH
+-1,571355,root,root,TH
+-1,571356,root,root,TH
+-1,571357,root,root,TH
+-1,571358,root,root,TH
+-1,571359,root,root,TH
+-1,571360,root,root,TH
+-1,604474,root,root,TH
+-1,604475,root,root,TH
+-1,604476,root,root,TH
+-1,604477,root,root,TH
+-1,604478,root,root,TH
+-1,604479,root,root,TH
+-1,604480,root,root,TH
+-1,604481,root,root,TH
+-1,604482,root,root,TH
+-1,604483,root,root,TH
+-1,604484,root,root,TH
+-1,604485,root,root,TH
+-1,604493,root,root,TH
+-1,604494,root,root,TH
+-1,604495,root,root,TH
+-1,604496,root,root,TH
+-1,604497,root,root,TH
+-1,604498,root,root,TH
+-1,604499,root,root,TH
+-1,604500,root,root,TH
+-1,604501,root,root,TH
+-1,604502,root,root,TH
+-1,572794,root,root,TH
+-1,572795,root,root,TH
+-1,572796,root,root,TH
+-1,572797,root,root,TH
+-1,572798,root,root,TH
+-1,572799,root,root,TH
+-1,572801,root,root,TH
+-1,605914,root,root,TH
+-1,605915,root,root,TH
+-1,605916,root,root,TH
+-1,605917,root,root,TH
+-1,605918,root,root,TH
+-1,605919,root,root,TH
+-1,605920,root,root,TH
+-1,605921,root,root,TH
+-1,605922,root,root,TH
+-1,605923,root,root,TH
+-1,605924,root,root,TH
+-1,605925,root,root,TH
+-1,605933,root,root,TH
+-1,605934,root,root,TH
+-1,605935,root,root,TH
+-1,605936,root,root,TH
+-1,605937,root,root,TH
+-1,605938,root,root,TH
+-1,605939,root,root,TH
+-1,605940,root,root,TH
+-1,605941,root,root,TH
+-1,605942,root,root,TH
+-1,574234,root,root,TH
+-1,574235,root,root,TH
+-1,574236,root,root,TH
+-1,574237,root,root,TH
+-1,574240,root,root,TH
+-1,607355,root,root,TH
+-1,607356,root,root,TH
+-1,607357,root,root,TH
+-1,607358,root,root,TH
+-1,607359,root,root,TH
+-1,607360,root,root,TH
+-1,607361,root,root,TH
+-1,607362,root,root,TH
+-1,607363,root,root,TH
+-1,607364,root,root,TH
+-1,607365,root,root,TH
+-1,607373,root,root,TH
+-1,607374,root,root,TH
+-1,607375,root,root,TH
+-1,607376,root,root,TH
+-1,607377,root,root,TH
+-1,607378,root,root,TH
+-1,607379,root,root,TH
+-1,607380,root,root,TH
+-1,607381,root,root,TH
+-1,607382,root,root,TH
+-1,575675,root,root,TH
+-1,575676,root,root,TH
+-1,575677,root,root,TH
+-1,575680,root,root,TH
+-1,575681,root,root,TH
+-1,608795,root,root,TH
+-1,608796,root,root,TH
+-1,608797,root,root,TH
+-1,608798,root,root,TH
+-1,608799,root,root,TH
+-1,608800,root,root,TH
+-1,608801,root,root,TH
+-1,608802,root,root,TH
+-1,608803,root,root,TH
+-1,608804,root,root,TH
+-1,608805,root,root,TH
+-1,608813,root,root,TH
+-1,608814,root,root,TH
+-1,608815,root,root,TH
+-1,608816,root,root,TH
+-1,608817,root,root,TH
+-1,608818,root,root,TH
+-1,608819,root,root,TH
+-1,608820,root,root,TH
+-1,608821,root,root,TH
+-1,608822,root,root,TH
+-1,608823,root,root,TH
+-1,577116,root,root,TH
+-1,577117,root,root,TH
+-1,610235,root,root,TH
+-1,610236,root,root,TH
+-1,610237,root,root,TH
+-1,610238,root,root,TH
+-1,610239,root,root,TH
+-1,610240,root,root,TH
+-1,610241,root,root,TH
+-1,610242,root,root,TH
+-1,610243,root,root,TH
+-1,610244,root,root,TH
+-1,610245,root,root,TH
+-1,610246,root,root,TH
+-1,610252,root,root,TH
+-1,610253,root,root,TH
+-1,610254,root,root,TH
+-1,610255,root,root,TH
+-1,610256,root,root,TH
+-1,610257,root,root,TH
+-1,610258,root,root,TH
+-1,610259,root,root,TH
+-1,610260,root,root,TH
+-1,610261,root,root,TH
+-1,578556,root,root,TH
+-1,578557,root,root,TH
+-1,578558,root,root,TH
+-1,611676,root,root,TH
+-1,611677,root,root,TH
+-1,611678,root,root,TH
+-1,611679,root,root,TH
+-1,611680,root,root,TH
+-1,611681,root,root,TH
+-1,611682,root,root,TH
+-1,611683,root,root,TH
+-1,611684,root,root,TH
+-1,611685,root,root,TH
+-1,611686,root,root,TH
+-1,611687,root,root,TH
+-1,611688,root,root,TH
+-1,611689,root,root,TH
+-1,611690,root,root,TH
+-1,611691,root,root,TH
+-1,611692,root,root,TH
+-1,611693,root,root,TH
+-1,611694,root,root,TH
+-1,611695,root,root,TH
+-1,611696,root,root,TH
+-1,611697,root,root,TH
+-1,611698,root,root,TH
+-1,611699,root,root,TH
+-1,611700,root,root,TH
+-1,579996,root,root,TH
+-1,579997,root,root,TH
+-1,579998,root,root,TH
+-1,613117,root,root,TH
+-1,613118,root,root,TH
+-1,613119,root,root,TH
+-1,613120,root,root,TH
+-1,613121,root,root,TH
+-1,613122,root,root,TH
+-1,613123,root,root,TH
+-1,613124,root,root,TH
+-1,613125,root,root,TH
+-1,613126,root,root,TH
+-1,613127,root,root,TH
+-1,613128,root,root,TH
+-1,613129,root,root,TH
+-1,613130,root,root,TH
+-1,613131,root,root,TH
+-1,613132,root,root,TH
+-1,613133,root,root,TH
+-1,613134,root,root,TH
+-1,613135,root,root,TH
+-1,613136,root,root,TH
+-1,613137,root,root,TH
+-1,613138,root,root,TH
+-1,613139,root,root,TH
+-1,613140,root,root,TH
+-1,581437,root,root,TH
+-1,581438,root,root,TH
+-1,581439,root,root,TH
+-1,614555,root,root,TH
+-1,614556,root,root,TH
+-1,614557,root,root,TH
+-1,614558,root,root,TH
+-1,614559,root,root,TH
+-1,614560,root,root,TH
+-1,614561,root,root,TH
+-1,614562,root,root,TH
+-1,614563,root,root,TH
+-1,614564,root,root,TH
+-1,614565,root,root,TH
+-1,614566,root,root,TH
+-1,614567,root,root,TH
+-1,614568,root,root,TH
+-1,614569,root,root,TH
+-1,614570,root,root,TH
+-1,614571,root,root,TH
+-1,614572,root,root,TH
+-1,614573,root,root,TH
+-1,614574,root,root,TH
+-1,614575,root,root,TH
+-1,614576,root,root,TH
+-1,614577,root,root,TH
+-1,614578,root,root,TH
+-1,614579,root,root,TH
+-1,582878,root,root,TH
+-1,582879,root,root,TH
+-1,615995,root,root,TH
+-1,615996,root,root,TH
+-1,615997,root,root,TH
+-1,615998,root,root,TH
+-1,615999,root,root,TH
+-1,616000,root,root,TH
+-1,616001,root,root,TH
+-1,616002,root,root,TH
+-1,616003,root,root,TH
+-1,616004,root,root,TH
+-1,616005,root,root,TH
+-1,616006,root,root,TH
+-1,616007,root,root,TH
+-1,616008,root,root,TH
+-1,616009,root,root,TH
+-1,616010,root,root,TH
+-1,616011,root,root,TH
+-1,616012,root,root,TH
+-1,616013,root,root,TH
+-1,616014,root,root,TH
+-1,616015,root,root,TH
+-1,616016,root,root,TH
+-1,616017,root,root,TH
+-1,616018,root,root,TH
+-1,616019,root,root,TH
+-1,584319,root,root,TH
+-1,617434,root,root,TH
+-1,617435,root,root,TH
+-1,617436,root,root,TH
+-1,617437,root,root,TH
+-1,617438,root,root,TH
+-1,617439,root,root,TH
+-1,617440,root,root,TH
+-1,617441,root,root,TH
+-1,617442,root,root,TH
+-1,617443,root,root,TH
+-1,617444,root,root,TH
+-1,617445,root,root,TH
+-1,617446,root,root,TH
+-1,617447,root,root,TH
+-1,617448,root,root,TH
+-1,617454,root,root,TH
+-1,617455,root,root,TH
+-1,617456,root,root,TH
+-1,617457,root,root,TH
+-1,617458,root,root,TH
+-1,617459,root,root,TH
+-1,585759,root,root,TH
+-1,585760,root,root,TH
+-1,585771,root,root,TH
+-1,618873,root,root,TH
+-1,618874,root,root,TH
+-1,618875,root,root,TH
+-1,618876,root,root,TH
+-1,618877,root,root,TH
+-1,618878,root,root,TH
+-1,618879,root,root,TH
+-1,618880,root,root,TH
+-1,618881,root,root,TH
+-1,618882,root,root,TH
+-1,618883,root,root,TH
+-1,618884,root,root,TH
+-1,618885,root,root,TH
+-1,618886,root,root,TH
+-1,618887,root,root,TH
+-1,618895,root,root,TH
+-1,618896,root,root,TH
+-1,618897,root,root,TH
+-1,618898,root,root,TH
+-1,618899,root,root,TH
+-1,587199,root,root,TH
+-1,587200,root,root,TH
+-1,587210,root,root,TH
+-1,587211,root,root,TH
+-1,620312,root,root,TH
+-1,620313,root,root,TH
+-1,620314,root,root,TH
+-1,620315,root,root,TH
+-1,620316,root,root,TH
+-1,620317,root,root,TH
+-1,620318,root,root,TH
+-1,620319,root,root,TH
+-1,620320,root,root,TH
+-1,620321,root,root,TH
+-1,620322,root,root,TH
+-1,620323,root,root,TH
+-1,620324,root,root,TH
+-1,620326,root,root,TH
+-1,620327,root,root,TH
+-1,620335,root,root,TH
+-1,620336,root,root,TH
+-1,620337,root,root,TH
+-1,620338,root,root,TH
+-1,588639,root,root,TH
+-1,588640,root,root,TH
+-1,588641,root,root,TH
+-1,588651,root,root,TH
+-1,621752,root,root,TH
+-1,621753,root,root,TH
+-1,621754,root,root,TH
+-1,621755,root,root,TH
+-1,621756,root,root,TH
+-1,621757,root,root,TH
+-1,621758,root,root,TH
+-1,621759,root,root,TH
+-1,621760,root,root,TH
+-1,621761,root,root,TH
+-1,621762,root,root,TH
+-1,621763,root,root,TH
+-1,621764,root,root,TH
+-1,621767,root,root,TH
+-1,621775,root,root,TH
+-1,621777,root,root,TH
+-1,556957,root,root,TH
+-1,556958,root,root,TH
+-1,4749,,root,TH
+-1,4761,,root,TH
+-1,4797,,root,TH
+-1,4821,,root,TH
+-1,4845,,root,TH

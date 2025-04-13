@@ -1,0 +1,29 @@
+{
+    "input": {
+        "network": "../input/networks/PH",
+        "hierarchy": "../input/networks/PH/hierarchy.tree",
+        "seeding": "../input/seeding/seed_PH_MSC.csv",
+        "intervention": ""
+    },
+    "batches": 1,
+    "simulations": 100,
+    "parameters": {
+        "model_parameters": {
+            "suitability_thresh": 0,
+            "exposure_delay": 3,
+            "alpha_S": [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100],
+            "alpha_L": 0.2,
+            "alpha_LD": [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100],
+            "kernel": "moore",
+            "kernel_parameters": 1
+        },
+        "simulation_parameters": {
+            "time_steps": 24,
+            "start_month": 5
+        }
+    },
+    "budget": [3,8],
+    "intervention_time": [3,6,12],
+    "random_seed": 9012,
+    "prefix": "PH_"
+}
