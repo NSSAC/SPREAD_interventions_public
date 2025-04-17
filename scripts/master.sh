@@ -8,6 +8,7 @@ function prepare_pipeline_model(){
 function prepare_all_pipelines_model(){
     if [ "$#" -eq 0 ]; then
       myArray=( bd vn ph id th ) # if no arguments given, uses these five networks by default
+    else
       myArray=( "$@" )
     fi
     myArray=( "${myArray[@]/#/'../input/config_files/'}" )
@@ -24,7 +25,6 @@ function prepare_pipeline(){
 function prepare_all_pipelines(){
     if [ "$#" -eq 0 ]; then
       myArray=( bd vn ph id th ) # if no arguments given, uses these five networks by default
-      myArray=( "$@" )
     else
       myArray=( "$@" )
     fi
@@ -33,10 +33,6 @@ function prepare_all_pipelines(){
     python3 ../scripts/generate_pipelines.py ${myArray[@]}
     # python3 ../scripts/generate_pipelines.py ../input/config_files/bdconfig.json ../input/config_files/vnconfig.json ../input/config_files/phconfig.json
     # multiple commands will overwrite the same file.
-}
-
-function start_ijob(){
-    ijob -A nssac_students -p bii
 }
 
 if [[ $# == 0 ]]; then
