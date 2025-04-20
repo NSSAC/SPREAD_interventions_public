@@ -1,0 +1,21 @@
+{
+    "network": "networks/ID", 
+    "time_steps": 24,
+    "number_of_simulations": 100,
+    "dag_type": 0,
+    "seeding_specification": "folder",
+    "interventions_specification": "file",
+    "interventions_type" : "None",
+
+    "experiments": {
+        "exposure_delay": [3], 
+        "alpha_S": [300, 400, 500],
+        "alpha_L": [0, 0.1, 0.2],
+        "alpha_LD": [50, 100, 200],
+        "moore_range": [1],
+        "start_month": [3, 5, 7],
+        "random_seed": [1],
+        "seeding": "seeding/ID",
+        "interventions": "interventions/input/ID/interventions/nointerventions.csv"
+    }
+}

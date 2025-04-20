@@ -1,0 +1,21 @@
+{
+    "network": "networks/PH", 
+    "time_steps": 24,
+    "number_of_simulations": 100,
+    "dag_type": 0,
+    "seeding_specification": "folder",
+    "interventions_specification": "folder",
+    "interventions_type" : "degree",
+
+    "experiments": {
+        "exposure_delay": [3], 
+        "alpha_S": [300, 500],
+        "alpha_L": [0, 0.2],
+        "alpha_LD": [50, 200],
+        "moore_range": [1],
+        "start_month": [5],
+        "random_seed": [1],
+        "seeding": "seeding/PH",
+        "interventions": "interventions/input/PH/degree_interventions"
+    }
+}
