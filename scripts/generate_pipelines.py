@@ -84,6 +84,7 @@ def generate_pipeline_instances(master_config, slurmFile, configs_only=False, si
 --export=ALL,command="{command}" --mem-per-cpu={mem_limit} \
 ./run_proc.sbatch; \
 ./qreg_single\n''')
+            # log files and directories will be automatically created, if they do not exist
         print(f"Number of instances processed: {i+1}")
 
 def job_array_write(master_config, slurmFile, simulator_only=False):

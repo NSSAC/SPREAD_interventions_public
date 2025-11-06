@@ -5,10 +5,10 @@ All code is in `./scripts`, and the necessary inputs are in `./inputs`.
 There are five networks available for use in analyses: BD (Bangladesh), ID
 (Indonesia), PH (Philippines), TH (Thailand), and VN (Vietnam).
 
-It is recommended to also have a `./work` directory and a
-`./results` directory to ensure code output functions properly. `./work`
+A `./work` directory and a
+`./results` directory should be added to ensure successful outputs. `./work`
 should contain directories named `configs`, `sim_summaries`, `dags`,
-`summaries`, and `interventions`.
+`summaries`, and `interventions`. The functions in `master.sh` will automatically generate these directories if any are missing.
 
 The code was written to be run on a Linux/Unix high-performance computing
 cluster with SLURM job scheduling
@@ -48,7 +48,7 @@ Run `./master.sh prepare_pipeline {network}` to prepare jobs for a single networ
 
 Run the generated `./run.sh` to submit the jobs to SLURM.
 
-Once all jobs have completed successfully, run `python gather_outputs.py` to collect outputs and create plots.
+Once all jobs have completed successfully, run `python gather_outputs.py -l` to collect outputs and create plots.
 
 ### Example invocations (no SLURM)
 
@@ -71,13 +71,13 @@ intervention algorithm, outputs summary info for the results to
 files for different budget/intervention delay combinations) to
 `../work/interventions/BD_S100_24`.
 
-`python gather_outputs.py` : combines output data to create
+`python gather_outputs.py -l` : combines output data to create
 `../results/summaries.csv`, `../results/sim_summaries.csv`, and
 `../results/interventions.csv`, outputs calculated jaccard indices to
 `../results/jaccard_indices_{network}.csv`, and creates plots
 `../results/budget_plot_{network}.pdf`,
 `../results/objective_plot_{network}.pdf`, and
-`../results/jaccard_plot_{network}.pdf`.
+`../results/jaccard_plot_{network}.pdf`. The `-l` option will force LaTeX to be used to render plot labels; it may be omitted if no LaTeX installation exists.
 
 `./clear.sh`: clears out folders in `work`. By default, clears out all
 folders. (Use the -h option to see other options.)
@@ -103,7 +103,7 @@ multiple networks.
 Run the generated `./run.sh` to submit the jobs to SLURM.
 
 Once all jobs have completed successfully, run `python
-gather_outputs_model.py` to collect outputs and create plots.
+gather_outputs_model.py -l` to collect outputs and create plots.
 
 ### Example invocations (no SLURM)
 
@@ -127,10 +127,10 @@ intervention algorithm, outputs summary info for the results to
 files for different budget/intervention delay combinations) to
 `../work/interventions/BD_as44_ald32`.
 
-`python gather_outputs_model.py` : gathers outputs into
+`python gather_outputs_model.py -l` : gathers outputs into
 `../results/summaries.csv`, `../results/sim_summaries.csv`, and
 `../results/interventions.csv`, and creates plots
-`../results/{network}_contours.pdf`.
+`../results/{network}_contours.pdf`. The `-l` option will force LaTeX to be used to render plot labels; it may be omitted if no LaTeX installation exists.
 
 `./clear.sh`: clears out all folders in `work`. (Use the -h option to see
 other options.)

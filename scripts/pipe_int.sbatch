@@ -6,8 +6,11 @@
 # ntasks and memory handled by script
 
 # Load any modules you require:
-module add anaconda
-module add gurobi
+# module add anaconda
+module add miniforge/24.3.0-py3.11
+module add gurobi/10.0.1
+export PYTHONPATH=$EBROOTGUROBI/lib/python3.11_utf32
+# change these as required, depending on Python installation
 
 HOMEPATH="../scripts" # for scripts
 WORKPATH="../work"

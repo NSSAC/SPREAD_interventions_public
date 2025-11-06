@@ -20,12 +20,16 @@ SIM_SUMMARY_PATH=f'{WORKPATH}/sim_summaries'
 OUTPATH='../results'
 
 plt.rcParams.update({
-    "text.usetex" : len(argv)>1 and 'l' in argv[1],
+    # "text.usetex" : len(argv)>1 and 'l' in argv[1],
     'font.size': 22,
     'axes.titlesize':28,
-    'axes.labelsize':26,
-    'font.family':'Computer Modern Roman'
+    'axes.labelsize':26,  
 })
+if len(argv)>1 and 'l' in argv[1]:
+    plt.rcParams.update({
+        'text.usetex' : True,
+        'font.family':'Computer Modern Roman'
+    })
 
 
 def combine_sim_summaries(path=SIM_SUMMARY_PATH, output=False, separate_headers=True):
@@ -132,7 +136,7 @@ def summary_plotter(df, use_IB=True):
                           orient='v', showmeans=True)
         sns.move_legend(ax1, "center right", bbox_to_anchor=(1, 1))
 
-    ax1.set_xlabel("Simulations")
+    ax1.set_xlabel("Number of Simulations")
     ax1.set_ylabel("Objective Value")
     
     fig2, ax2 = plt.subplots(figsize=[12,4.8])
@@ -148,7 +152,7 @@ def summary_plotter(df, use_IB=True):
                           orient='v', showmeans=True)
         sns.move_legend(ax2, "center right")#, bbox_to_anchor=(1, 1))
 
-    ax2.set_xlabel("Simulations")
+    ax2.set_xlabel("Number of Simulations")
     ax2.set_ylabel("Budget Used / LP_Budget")
     
     return (fig1,ax1), (fig2,ax2)
@@ -199,7 +203,7 @@ def jaccard_plotter(df):
         sns.boxplot(data=df, x='num_sims', y='jaccard',
                     ax=ax, orient='v', showmeans=True)
         sns.move_legend(ax, "center right")#, bbox_to_anchor=(1, 1))
-    ax.set_xlabel("Simulations")
+    ax.set_xlabel("Number of Simulations")
     ax.set_ylabel("Pairwise Jaccard Index")
     return fig,ax
   

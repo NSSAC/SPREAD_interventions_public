@@ -8,7 +8,9 @@
 #SBATCH -A nssac_students
 
 # Load any modules you require:
-module add anaconda
+# module add anaconda
+module add miniforge
+# change this as required, depending on Python installation
 
 HOMEPATH="../scripts" # for scripts
 WORKPATH="../work"
