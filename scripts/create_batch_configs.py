@@ -13,7 +13,7 @@ from copy import deepcopy
 
 CONFIG_PATH = "../work/configs" # where config files are outputted, by default
 
-def generateConfigs(config, sims=None, alpha_S=None, alpha_LD=None):
+def generateConfigs(config, sims=None, alpha_S=None, alpha_LD=None, intervention=None):
     '''
     Given Dict representing config json file, returns a list of config Dicts, one per batch.
     
@@ -41,7 +41,7 @@ def generateConfigs(config, sims=None, alpha_S=None, alpha_LD=None):
     else:
         s = sims
     aS = config['parameters']['model_parameters']['alpha_S'] if alpha_S is None else alpha_S
-    aLD = config['parameters']['model_parameters']['alpha_S'] if alpha_LD is None else alpha_LD
+    aLD = config['parameters']['model_parameters']['alpha_LD'] if alpha_LD is None else alpha_LD
     # none of these should be a list, either
     
     # change prefix based on what analysis is being conducted
@@ -52,9 +52,10 @@ def generateConfigs(config, sims=None, alpha_S=None, alpha_LD=None):
         # by default, uses number of simulations
     
     for i in range(num_batches):
-        prefix_index = "_"+str(i) if num_batches > 1 else ""
+        # prefix_index = "_"+str(i) if num_batches > 1 else ""
+        prefix_index = "_"+str(i)
         batch_config = {
-            "network_specific_input" : config['input'],
+            "network_specific_input" : deepcopy(config['input']),
             "random_seed": random.randrange(2**31),
             "model_parameters" : deepcopy(config['parameters']['model_parameters']),
             "simulation_parameters" : deepcopy(config['parameters']['simulation_parameters']),
@@ -64,6 +65,10 @@ def generateConfigs(config, sims=None, alpha_S=None, alpha_LD=None):
         batch_config['simulation_parameters']['number_of_simulations'] = s
         batch_config['model_parameters']['alpha_S'] = aS # overwrites if needed
         batch_config['model_parameters']['alpha_LD'] = aLD
+
+        if intervention is not None:
+            batch_config['network_specific_input']['intervention'] = intervention
+
         out_configs.append(batch_config)    
     return out_configs
 

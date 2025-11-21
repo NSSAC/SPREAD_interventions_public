@@ -124,35 +124,64 @@ def parseOneSimulation(lines, sim_id, m, unique_groups, x, y, z, int_time, no_ac
     return m, unique_groups, x, y, z, no_action
 
 #Rounding Algorithm
-def rounding(x, y, z, denom):
-    X = {}
-    Y = {}
-    Z = {}
+def rounding(x, y, z, denom, fixed_budget=None):
+    X = {} # stores if group is intervened, yes/no; rounded
+    # Y = {} # unused?
+    Y = None
+    Z = {} # stores if node has been infected at some point, yes/no (for objective value); rounded
+    # refer to detailed explanations below
  
-    #round z values to Z    
+    #round z values to Z (0 or 1)   
     for key, gv in z.items():
-        val = gv.X
+        # key refers to group number; gv refers to gurobi output
+        val = gv.X # z value in question
         if val >= 0.5:
            Z[key] = 1
         else:
            Z[key] = 0
+    
     #round x values to X
-    count = 0
-    frac_k = 1.0/(2*denom)
-    print("Threshold: "+str(frac_k))
-    for key, gv in x.items():
-        val = gv.X
-        # 1/(2*denom), either GM or no_groups
-        if val >= frac_k:
-           X[key] = 1
-           count = count+1
-        else:
-           X[key] = 0
-    print("X rounded to 1: "+str(count))
+    if fixed_budget is None:
+        count = 0
+        frac_k = 1.0/(2*denom)
+        print("Threshold: "+str(frac_k))
+        for key, gv in x.items():
+            val = gv.X # x value in question
+            # 1/(2*denom), either GM or no_groups
+            if val >= frac_k:
+               X[key] = 1
+               count = count+1
+            else:
+               X[key] = 0
+        print("X rounded to 1: "+str(count))
+
+    else:
+        # Heuristic algorithm; guarantees interventions 
+        # at a specified no. of groups, rather than those that pass threshold
+        key_list, val_dict = [],{}
+        for key, gv in x.items():
+            key_list.append(key)
+            val_dict[key] = gv.X
+        # sort key list in descending order of corresponding x values
+        key_list.sort(key=(lambda k: val_dict[k]), reverse=True)
+        # now take top B nodes. Ties are handled arbitrarily
+        for i in range(len(key_list)):
+            key = key_list[i]
+            if i<fixed_budget:
+                X[key] = 1
+            else:
+                X[key] = 0
+        print('Heuristic applied')
+        print(X)
+
     return X, Y, Z
 
+
+
+
 #LP for group interventions
-def prepareLP_group(input_file, budget_groups, int_time, l, group, hierarchy_file, use_gm=True, runtime=True):
+def prepareLP_group(input_file, budget_groups, int_time, l, group, hierarchy_file, 
+                    use_gm=True, runtime=True, fixed_budget=None):
     
     no_action = 0.0
     # no_action1 = 0.0
@@ -164,9 +193,9 @@ def prepareLP_group(input_file, budget_groups, int_time, l, group, hierarchy_fil
     unique_groups = set()
     # y_keys = set()
     # z_keys = set()
-    x = {} # stores whether group is intervened or not
-    y = {} # stores if node in time-expanded graph is infected, at a given time/simulation (stored as a 0-1 float)
-    z = {} # stores if node is infected at some time in a given simulation
+    x = {} # x[g_u]: stores whether a group is intervened or not. Between 0 and 1; represents probability of intervention
+    y = {} # y[u,i,j]: stores if node in time-expanded graph is infected, at a given time/simulation
+    z = {} # z[u,j]: stores if node u is infected in a given simuluation j, at some (any) timestep
     
     # Memory-efficient input file reading:
     # First, loop through entire file once to get rows in which new simulations start
@@ -196,7 +225,7 @@ def prepareLP_group(input_file, budget_groups, int_time, l, group, hierarchy_fil
         lines = (next(fp).strip() for _ in range(sim_starts[index], sim_starts[index+1])) # a generator
         m, unique_groups, x, y, z, no_action = parseOneSimulation(lines, index, m, unique_groups, x, y, z, int_time, no_action, l, group)
     fp.close()
-    M = float(index+1)        
+    M = float(index+1) # M: total number of simulations       
     
     no_action = no_action/M
     print("No Action: avg. # nodes infected "+str(no_action))
@@ -223,16 +252,16 @@ def prepareLP_group(input_file, budget_groups, int_time, l, group, hierarchy_fil
         # use gm to round instead
         gm_val = gm(pd.read_csv(input_file), pd.read_csv(hierarchy_file))
         print("GM value: "+str(gm_val))
-        X,Y,Z = rounding(x,y,z, gm_val)
+        X,Y,Z = rounding(x,y,z, gm_val, fixed_budget=fixed_budget)
     else:
-        X,Y,Z = rounding(x,y,z, no_groups)
+        X,Y,Z = rounding(x,y,z, no_groups, fixed_budget=fixed_budget)
     r = m.runtime
     print("Optimizer runtime: "+str(r))
     w = m.work
     print("Optimizer work time: "+str(w))
     m.dispose()
     if runtime:
-        return X,Y,Z, no_groups, LP_objValue, M, lp_budget, sim_id, gm_val, r, w
+        return X,Y,Z, no_groups, LP_objValue, M, lp_budget, sim_id, gm_val, r, w # output runtime if specified
     else:
         return X,Y,Z, no_groups, LP_objValue, M, lp_budget, sim_id, gm_val # added: max sim_id, gm_val, runtime, work
 
@@ -256,7 +285,7 @@ def outputGenerator(X,Y,Z,no_groups,LP_objValue, M, int_time, budget_given, inpu
     for key in Z.keys():
         if Z[key] == 1:
            algo_value += 1
-    algo_value = algo_value/M
+    algo_value = algo_value/M # algorithmic obj value: average number of infected nodes across all simulations
     print("Algorithm objective value "+str(algo_value))
     return budget_used, algo_value, filename
 
@@ -275,6 +304,7 @@ if __name__ == "__main__":
     parser.add_argument("--intervention_path", help="Output directory for intervention folders", default="../work/interventions")
     parser.add_argument("--input_code", help="Add a prefix to each output file", default="")
     parser.add_argument("--no_gm", action='store_true', help="Round results using number of groups instead of GM")
+    parser.add_argument("--fixed_budget", action='store_true', help="Specify to force algorithm to intervene with a fixed budget instead of rounding")
     args = parser.parse_args()
 
     # read hierarchy file for group mapping, line by line
@@ -302,7 +332,8 @@ if __name__ == "__main__":
     for budget, int_time in product(args.budgets, args.intervention_times):
         print("budget, int_time: "+str(budget)+","+str(int_time))
         # output string for summary
-        X,Y,Z, no_groups, LP_objValue, M, lp_budget, max_sim, gm_val, runtime, work = prepareLP_group(args.input_file, budget, int_time,0, group, args.hierarchy_file, use_gm=(not args.no_gm))
+        X,Y,Z, no_groups, LP_objValue, M, lp_budget, max_sim, gm_val, runtime, work = prepareLP_group(args.input_file, budget, int_time,0, group, args.hierarchy_file, 
+                                                                                                        use_gm=(not args.no_gm), fixed_budget=(budget if args.fixed_budget else None))
         budget_used, algo_value, int_filename = outputGenerator(X,Y,Z,no_groups,LP_objValue, M, int_time, budget, args.input_code,  outpath=args.intervention_path)
         #budget_given is used as name for lp_budget due to change in notion
         

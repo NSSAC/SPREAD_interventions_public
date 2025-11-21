@@ -28,10 +28,19 @@ plt.rcParams.update({
     'font.family':'Computer Modern Roman'
 })
 
+NETWORK_NODE_COUNT = {
+    'BD':211,
+    'ID':3296,
+    'PH':673,
+    'TH':738,
+    'VN':503
+}# number of nodes in each of the networks. Hardcoded for sake of time
+
 def combine_sim_summaries(path=SIM_SUMMARY_PATH, output=False, separate_headers=True):
     '''Combines simulation summary files into one csv file.
     Accounts for two different output formats'''
     if not separate_headers:
+        # each csv file has the same header
         df_list = []
         for file in glob(f'{path}/*.csv'):
             df = pd.read_csv(file)
@@ -49,7 +58,10 @@ def combine_sim_summaries(path=SIM_SUMMARY_PATH, output=False, separate_headers=
         df_out = pd.read_csv(StringIO(csv_string))
         df_out['filename'] = sorted(glob(f'{path}/*.csv'))[1:]
         # ignores 0header.csv
-        
+    
+    df_out['network'] = df_out['network_path'].str.slice(start=-2) # assumes two-letter networks
+    df_out['node_count'] = df_out['network'].map(NETWORK_NODE_COUNT)
+
     df_out['input_code'] = df_out['filename'].str.extract(r"(?<=\/)([A-Z]+_as[0-9]+_ald[0-9]+)(?=_summary\.csv)", expand=False)
     if output:
         df_out.to_csv(f'{OUTPATH}/sim_summaries.csv', index=False)
@@ -71,11 +83,12 @@ def combine_summaries(path=SUMMARY_PATH, output=False, separate_headers=True):
         csv_string = subprocess.check_output(f"cat {path}/*.csv", shell=True, text=True)
         df = pd.read_csv(StringIO(csv_string))
         
-    network = df['int_filename'].str.extract(r"(?<=/)([A-Z]+)(?=_as)", expand=False) # CHANGED: depends on naming scheme!!
+    network = df['int_filename'].str.extract(r"(?<=/)([A-Z]+)(?=[0-9]*_as)", expand=False) # CHANGED: depends on naming scheme!!
     df['network'] = network.fillna("")
     # It is impossible to get alphas from reading DAGs. Need to parse it from the input filename
     df['alpha_S'] = df['input_file'].str.extract(r"(?<=as)([0-9.]+)(?=_)", expand=False).astype(float) # can be decimal
     df['alpha_LD'] = df['input_file'].str.extract(r"(?<=_ald)([0-9.]+)(?=_)", expand=False).astype(float)
+    
     df_out = df.sort_values(['network','alpha_S','alpha_LD','input_code'])
     if output:
         df_out.to_csv(f'{OUTPATH}/summaries.csv', index=False)
@@ -88,9 +101,11 @@ def combine_interventions(path=INTERVENTION_PATH, output=False):
     for folder in glob(path+'/*'):
         # summary files in folders; folder name is number of simulations
         foldername = os.path.basename(folder)
-        network = re.search(r"^[A-Z]+(?=_S)", foldername)
+        network = re.search(r"^[A-Z]+(?=[0-9]*_S)", foldername)
         network = "" if network is None else network[0]
         # Highly dependent on folder naming scheme! May need to change if prefix is different
+        prefix = re.search(r"^[A-Z]+[0-9]*(?=_S)", foldername)
+        prefix = "" if prefix is None else prefix[0]
         alpha_S = float(re.search(r"(?<=as)[0-9.]+(?=_)", foldername)[0])
         alpha_LD = float(re.search(r"(?<=_ald)[0-9.]+", foldername)[0])
         for file in glob(folder+'/*.csv'):
@@ -103,9 +118,10 @@ def combine_interventions(path=INTERVENTION_PATH, output=False):
                 budget=budget,
                 int_filename=file,
                 network=network,
+                prefix=prefix,
                 alpha_S=alpha_S,
                 alpha_LD=alpha_LD)
-            int_df = int_df[['network','alpha_S','alpha_LD','delay','budget','group','time','int_filename']]
+            int_df = int_df[['network','prefix','alpha_S','alpha_LD','delay','budget','group','time','int_filename']]
             df_list.append(int_df)
         # one row contains one node.
     if len(df_list)==0:

@@ -19,6 +19,14 @@ INTERVENTION_PATH=f'{WORKPATH}/interventions'
 SIM_SUMMARY_PATH=f'{WORKPATH}/sim_summaries'
 OUTPATH='../results'
 
+NETWORK_NODE_COUNT = {
+    'BD':211,
+    'ID':3296,
+    'PH':673,
+    'TH':738,
+    'VN':503
+}# number of nodes in each of the networks. Hardcoded for sake of time
+
 plt.rcParams.update({
     # "text.usetex" : len(argv)>1 and 'l' in argv[1],
     'font.size': 22,
@@ -54,15 +62,20 @@ def combine_sim_summaries(path=SIM_SUMMARY_PATH, output=False, separate_headers=
         df_out['filename'] = [s for s in sorted(glob(f'{path}/*.csv')) if s.endswith('summary.csv')]
         # ignores 0header.csv
         
+    df_out['network'] = df_out['network_path'].str.slice(start=-2) # assumes two-letter networks
+    df_out['node_count'] = df_out['network'].map(NETWORK_NODE_COUNT)
+
     df_out['input_code'] = df_out['filename'].str.extract(r"(?<=\/)([A-Z]+_S[0-9]+_[0-9]+)(?=_summary\.csv)", expand=False)
     df_out = df_out.sort_values(['network_path','number_of_simulations','input_code'])
     if output:
         df_out.to_csv(f'{OUTPATH}/sim_summaries.csv', index=False)
     return df_out
 
+
+
 def combine_summaries(path=SUMMARY_PATH, output=False, separate_headers=True):
     '''Combines intervention summary files into one csv file.
-    Accounts for two different output formats'''
+    Accounts for two different output formats (see combine_sim_summaries)'''
     if not separate_headers:
         df_list = []
         for file in glob(f'{path}/*.csv'):
@@ -75,8 +88,9 @@ def combine_summaries(path=SUMMARY_PATH, output=False, separate_headers=True):
         csv_string = subprocess.check_output(f"cat {path}/*.csv", shell=True, text=True)
         df = pd.read_csv(StringIO(csv_string))
         
-    network = df['int_filename'].str.extract(r"(?<=/)([A-Z]+)(?=_S)", expand=False) # depends on naming scheme
+    network = df['int_filename'].str.extract(r"(?<=/)([A-Z]+)(?=[0-9]*_S)", expand=False) # depends on naming scheme
     df['network'] = network.fillna("")
+
     df_out = df.sort_values(['network','num_sims','delay','budget','input_code'])
     if output:
         df_out.to_csv(f'{OUTPATH}/summaries.csv', index=False)
@@ -90,20 +104,24 @@ def combine_interventions(path=INTERVENTION_PATH, output=False):
         # summary files in folders; folder name is number of simulations
         foldername = os.path.basename(folder)
         num_sims = int(re.search(r"(?<=S)[0-9]+(?=_)", foldername)[0])
-        network = re.search(r"^[A-Z]+(?=_S)", foldername)
+        network = re.search(r"^[A-Z]+(?=[0-9]*_S)", foldername)
         network = "" if network is None else network[0]
         # Highly dependent on folder naming scheme; may need to modify if prefix is different
+        prefix = re.search(r"^[A-Z]+[0-9]*(?=_S)", foldername)
+        prefix = "" if prefix is None else prefix[0]
         for file in glob(folder+'/*.csv'):
             filename = os.path.basename(file)
             delay = int(re.search(r"(?<=I)[0-9]+(?=-)", filename)[0])
             budget = int(re.search(r"(?<=[0-9]-B)[0-9]+", filename)[0])
             int_df = pd.read_csv(file)
-            int_df['num_sims'] = num_sims
-            int_df['delay'] = delay
-            int_df['budget'] = budget
-            int_df['int_filename'] = file
-            int_df['network'] = network
-            int_df = int_df[['network','num_sims','delay','budget','group','time','int_filename']]
+            int_df = int_df.assign(
+                num_sims=num_sims,
+                delay=delay,
+                budget=budget,
+                int_filename=file,
+                network=network,
+                prefix=prefix )
+            int_df = int_df[['network','prefix','num_sims','delay','budget','group','time','int_filename']]
             df_list.append(int_df)
         # one row contains one node.
     if len(df_list)==0:
@@ -231,12 +249,14 @@ if __name__=='__main__':
     a = argv[1] if len(argv)>1 else ""
     # simple command line options
     if 'p' not in a:
-        print("Combining Simulations...")
-        _ = combine_sim_summaries(output=True)
-        print("Combining Summaries...")
-        df1 = combine_summaries(output=True)
-        print("Combining Interventions...")
-        df2 = combine_interventions(output=True)
+        if 'i' not in a:
+            print("Combining Simulations...")
+            _ = combine_sim_summaries(output=True)
+        if 's' not in a:
+            print("Combining Summaries...")
+            df1 = combine_summaries(output=True)
+            print("Combining Interventions...")
+            df2 = combine_interventions(output=True)
     else:
         df1 = pd.read_csv(f'{OUTPATH}/summaries.csv')
         df2 = pd.read_csv(f'{OUTPATH}/interventions.csv')

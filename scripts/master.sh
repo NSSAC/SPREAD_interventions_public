@@ -52,5 +52,5 @@ if [[ $# == 0 ]]; then
    echo "Here are the options:"
    grep "^function" $BASH_SOURCE | sed -e 's/function/  /' -e 's/[(){]//g' -e '/IGNORE/d'
 else
-   eval $1 $2
+   eval $1 ${@:2}
 fi

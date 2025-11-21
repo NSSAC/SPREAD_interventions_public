@@ -109,7 +109,9 @@ echo "Submitted batch job $jid"; ./qreg_batch \n''')
         # interventions part
         if simulator_only:
             continue
-        for b,i in itertools.product(master_config['budget'], master_config['intervention_time']):
+        budgets = master_config['budget'] if type(master_config['budget'])==list else [master_config['budget']]
+        ints = master_config['intervention_time'] if type(master_config['intervention_time'])==list else [master_config['intervention_time']]
+        for b,i in itertools.product(budgets, ints):
             cpu_limit = math.ceil(MEM_VALUES[network_name] * int(s) * int(i) / 815) 
             cpu_limit = min(max(cpu_limit,1),20)
             # rough estimate of how many threads for optimizer to utilize, from 1 to 20
