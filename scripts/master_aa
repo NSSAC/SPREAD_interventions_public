@@ -14,7 +14,10 @@ function bd(){
 
 function collect(){
     cd ..
-    find . -iname "sim_summaries.csv" -print0 | xargs -0 cat | sort | uniq > results/int_summaries.csv
+    (
+        find . -type f -iname 'sim_summaries.csv' -print0 | xargs -0 cat | head -n 1
+  find . -type f -iname 'sim_summaries.csv' -print0 | xargs -0 cat | sort | uniq | grep -iv "^network"
+) > results/int_summaries.csv
 }
 
 function genint(){
