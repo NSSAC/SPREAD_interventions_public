@@ -107,7 +107,7 @@ def run_spread(network,
     hierarchyTree=hierarchyTree.set_index('child').parent
 
     if not interventions is None:
-        interventions = interventions.set_index('node')
+        interventions = interventions.set_index('group')#'node') # bugfix
 
     # Map "m#" to "#"
     renameMap={}

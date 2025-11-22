@@ -69,6 +69,7 @@ def combine_sim_summaries(path=SIM_SUMMARY_PATH, output=False, separate_headers=
     df_out = df_out.sort_values(['network_path','number_of_simulations','input_code'])
     if output:
         df_out.to_csv(f'{OUTPATH}/sim_summaries.csv', index=False)
+        print(f'{OUTPATH}/sim_summaries.csv')
     return df_out
 
 
@@ -94,6 +95,7 @@ def combine_summaries(path=SUMMARY_PATH, output=False, separate_headers=True):
     df_out = df.sort_values(['network','num_sims','delay','budget','input_code'])
     if output:
         df_out.to_csv(f'{OUTPATH}/summaries.csv', index=False)
+        print(f'{OUTPATH}/summaries.csv')
     return df_out
 
 def combine_interventions(path=INTERVENTION_PATH, output=False):
@@ -130,6 +132,7 @@ def combine_interventions(path=INTERVENTION_PATH, output=False):
     df_out = pd.concat(df_list, ignore_index=True).sort_values(['num_sims','int_filename'])
     if output:
         df_out.to_csv(f'{OUTPATH}/interventions.csv', index=False)
+        print(f'{OUTPATH}/interventions.csv')
     return df_out
         
             
@@ -260,7 +263,7 @@ if __name__=='__main__':
     else:
         df1 = pd.read_csv(f'{OUTPATH}/summaries.csv')
         df2 = pd.read_csv(f'{OUTPATH}/interventions.csv')
-    if 'o' not in a:
+    if 'o' not in a and 'i' not in a and 's' not in a:
         print('Plotting...')
         plot_multiple(df1,df2)
     

@@ -67,7 +67,7 @@ def generateConfigs(config, sims=None, alpha_S=None, alpha_LD=None, intervention
         batch_config['model_parameters']['alpha_LD'] = aLD
 
         if intervention is not None:
-            batch_config['network_specific_input']['intervention'] = intervention
+            batch_config['network_specific_input']['interventions'] = intervention # interventions with an s
 
         out_configs.append(batch_config)    
     return out_configs
