@@ -5,7 +5,8 @@
 # Partition option:
 #SBATCH -p bii
 # Charge code opton:
-#SBATCH -A nssac_students
+##SBATCH -A nssac_students
+#SBATCH -A bii_nssac
 
 # Load any modules you require:
 # module add anaconda

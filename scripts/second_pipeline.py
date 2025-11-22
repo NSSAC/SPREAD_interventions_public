@@ -13,7 +13,7 @@ WORKPATH="../work"
 CONFIG_PATH = 'configs'
 SIM_SUMMARY_PATH="sim_summaries"
 DAG_PATH="dags"
-RESULTSPATH='../results'
+RESULTSPATH='results'
 # Where files are saved, relative to WORKPATH:
 INPUTPATH= "../input/config_files"
 
@@ -75,7 +75,7 @@ def second_pipeline_instances(int_summary_file: str, slurmFile) -> None:
 mkdir -p {logpath} 
 sbatch -o {logpath}/log.txt \
 --export=ALL,prefix={prefix},dag_type=0,single=1 \
-./pipe_sim.sbatch; ./qreg_batch \n''') # one statement per config files, no batches
+../scripts/pipe_sim.sbatch; ../scripts/qreg_batch \n''') # one statement per config files, no batches
 
 def main():
 	# parser
@@ -84,7 +84,7 @@ def main():
 
 	# feature vector arguments
 	parser.add_argument("int_summary_file",help="Interventions output summary file path",
-						nargs='?', default='../results/interventions.csv')
+						nargs='?', default=RESULTSPATH+'/interventions.csv')
 	parser.add_argument("-r", "--run_file", 
 			default="run.sh",
 			help="It contains slurm invocation of training script for each instance.")
@@ -94,7 +94,7 @@ def main():
 	slurmFile.write('#!/bin/bash\n')
 	slurmFile.write('start=$SECONDS\n')
 
-	slurmFile.write('./clear.sh -s\n') # need to clear simulation output
+	slurmFile.write('../scripts/clear.sh -s\n') # need to clear simulation output
 	second_pipeline_instances(args.int_summary_file, slurmFile)
 			
 	slurmFile.write('echo "Total time" $(($SECONDS-$start))\n')

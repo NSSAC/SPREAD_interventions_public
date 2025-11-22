@@ -1,7 +1,8 @@
 #!/bin/bash
 # SLURM JOB SCRIPT OPTIONS:
 #SBATCH --time=06:00:00
-#SBATCH -A nssac_students
+##SBATCH -A nssac_students
+#SBATCH -A bii_nssac
 #SBATCH -p bii
 # ntasks and memory handled by script
 

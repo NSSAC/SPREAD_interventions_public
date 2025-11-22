@@ -103,8 +103,8 @@ jid=$(sbatch \
 -o {WORKPATH}/logs/{prefix}_%a/S{s}_%a_log.txt \
 --array=0-{batches-1} \
 --export=ALL,prefix={prefix} \
-./pipe_sim.sbatch | awk '{{print $NF}}' )
-echo "Submitted batch job $jid"; ./qreg_batch \n''')
+../scripts/pipe_sim.sbatch | awk '{{print $NF}}' )
+echo "Submitted batch job $jid"; ../scripts/qreg_batch \n''')
         
         # interventions part
         if simulator_only:
@@ -124,8 +124,8 @@ sbatch -o {WORKPATH}/logs/{prefix}_%a/I{i}B{b}_log.txt \
 --export=ALL,prefix={prefix},\
 hierarchy={master_config['input']['hierarchy']},budget={b},\
 int_time={i} \
-./pipe_int.sbatch; \
-./qreg_batch \n''')           
+../scripts/pipe_int.sbatch; \
+../scripts/qreg_batch \n''')           
 
 
 def parse_budget_int(master_config):

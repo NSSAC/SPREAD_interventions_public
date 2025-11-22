@@ -1,0 +1,31 @@
+#!/bin/bash
+
+HOMEPATH="../scripts"
+WORKPATH="../work"
+CONFIGFILEPATH="../input/config_files"
+
+function bd(){
+    # this is just for record. this function cannot be called directly
+    master.sh prepare_all_pipelines bd1 bd2
+    python ../scripts/gather_outputs.py -i
+    python ../scripts/second_pipeline.py
+    python ../scripts/gather_outputs.py -s
+}
+
+function collect(){
+    cd ..
+    find . -iname "sim_summaries.csv" -print0 | xargs -0 cat | sort | uniq > results/int_summaries.csv
+}
+
+function genint(){
+    create_directories
+    prefix="${1:-bd}" # if no arguments given, uses bd_config.json
+    python3 ${HOMEPATH}/generate_intervention_configs.py ${CONFIGFILEPATH}/${prefix,,}config.json
+}
+
+if [[ $# == 0 ]]; then
+   echo "Here are the options:"
+   grep "^function" $BASH_SOURCE | sed -e 's/function/  /' -e 's/[(){]//g' -e '/IGNORE/d'
+else
+   eval $1 ${@:2}
+fi

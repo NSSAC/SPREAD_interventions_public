@@ -6,8 +6,12 @@ from glob import glob
 import os
 import re
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+try:
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+except:
+    print("Matplotlib or seaborn not found; plotting functions will be disabled.")
+    pass
 from itertools import combinations
 import subprocess
 from io import StringIO
@@ -17,7 +21,7 @@ WORKPATH='../work'
 SUMMARY_PATH=f'{WORKPATH}/summaries'
 INTERVENTION_PATH=f'{WORKPATH}/interventions'
 SIM_SUMMARY_PATH=f'{WORKPATH}/sim_summaries'
-OUTPATH='../results'
+OUTPATH='results'
 
 NETWORK_NODE_COUNT = {
     'BD':211,
@@ -27,17 +31,21 @@ NETWORK_NODE_COUNT = {
     'VN':503
 }# number of nodes in each of the networks. Hardcoded for sake of time
 
-plt.rcParams.update({
-    # "text.usetex" : len(argv)>1 and 'l' in argv[1],
-    'font.size': 22,
-    'axes.titlesize':28,
-    'axes.labelsize':26,  
-})
-if len(argv)>1 and 'l' in argv[1]:
+try:
     plt.rcParams.update({
-        'text.usetex' : True,
-        'font.family':'Computer Modern Roman'
+        # "text.usetex" : len(argv)>1 and 'l' in argv[1],
+        'font.size': 22,
+        'axes.titlesize':28,
+        'axes.labelsize':26,  
     })
+    if len(argv)>1 and 'l' in argv[1]:
+        plt.rcParams.update({
+            'text.usetex' : True,
+            'font.family':'Computer Modern Roman'
+        })
+except:
+    print("Matplotlib not found; plotting functions will be disabled.")
+    pass
 
 
 def combine_sim_summaries(path=SIM_SUMMARY_PATH, output=False, separate_headers=True):
