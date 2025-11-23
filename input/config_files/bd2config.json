@@ -6,7 +6,7 @@
         "intervention": ""
     },
     "batches": 1,
-    "simulations": 100,
+    "simulations": 500,
     "parameters": {
         "model_parameters": {
             "suitability_thresh": 0,

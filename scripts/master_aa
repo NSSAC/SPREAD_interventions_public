@@ -10,6 +10,7 @@ function bd(){
     python ../scripts/gather_outputs.py -i
     python ../scripts/second_pipeline.py
     python ../scripts/gather_outputs.py -s
+    collect
 }
 
 function collect(){
