@@ -6,6 +6,7 @@ from glob import glob
 import os
 import re
 import pandas as pd
+from pdb import set_trace
 try:
     import matplotlib.pyplot as plt
     import seaborn as sns
@@ -119,7 +120,7 @@ def combine_interventions(path=INTERVENTION_PATH, output=False):
         # Highly dependent on folder naming scheme; may need to modify if prefix is different
         prefix = re.search(r"^[A-Z]+[0-9]*(?=_S)", foldername)
         prefix = "" if prefix is None else prefix[0]
-        for file in glob(folder+'/*.csv'):
+        for file in glob(folder+'/new*.csv'):
             filename = os.path.basename(file)
             delay = int(re.search(r"(?<=I)[0-9]+(?=-)", filename)[0])
             budget = int(re.search(r"(?<=[0-9]-B)[0-9]+", filename)[0])

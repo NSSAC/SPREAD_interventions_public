@@ -81,34 +81,7 @@ for (parent, delay, budget) in ossdf[['parent', 'delay', 'budget']].drop_duplica
     # Save to new file
     out_path = os.path.join(parent, f'new_I{delay}-B{budget}.csv')
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
-    set_trace()
     final_df.to_csv(out_path, index=False)
 
 print("Rank-based intervention solutions have been generated and saved.")
 
-
-# collect all intervention files
-xx = glob('interventions/**/comp_I*csv')
-set_trace()
-
-# read each file, add a column for file path, concat to df. Each file has group,val,intervene as columns
-
-# separate parent folder from file path and assign to a new column parent
-
-# files are of the form comp_I3-B4.csv, parse to set new column delay=3 and budget=4
-
-# create a column called score by dividing val by budget
-
-# groupby parent and delay, selecting only columns group and score, sum score. this fill be called idf.
-
-# groupby parent, delay and budget, and sum intervene, and call the column sol_size. call this ossdf (original solution size df)
-
-# for each unique (parent, delay, budget) do the following
-
-### find the row in ossdf with the highest sol_size <= budget, say budget_
-
-### now build solution by first inheriting the groups corresponding this (parent, delay, budget_) in df. Handle empty by making empty list
-
-### suppose sol is this set. fill gap of budget-budget_ by adding nodes that are not in this set by adding nodes in idf that not present in sol in descending order.
-
-### save this as new_I3-B4.csv in the parent folder with columns group,delay(renamed as time)

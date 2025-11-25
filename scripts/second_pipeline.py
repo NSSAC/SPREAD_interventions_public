@@ -6,6 +6,7 @@ import json
 from glob import glob
 import argparse
 import pandas as pd
+from pdb import set_trace
 from create_batch_configs import generateConfigs 
 
 HOMEPATH="../scripts"

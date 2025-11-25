@@ -8,6 +8,7 @@ function bd(){
     # this is just for record. this function cannot be called directly
     master.sh prepare_all_pipelines bd1 bd2
     ./run.sh
+    python ../scripts/fill_gaps.py
     python ../scripts/gather_outputs.py -i
     python ../scripts/second_pipeline.py
     ./run.sh
