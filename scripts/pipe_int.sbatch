@@ -33,5 +33,5 @@ python ${HOMEPATH}/algorithm_groupint_general_v2.py \
     ${WORKPATH}/${DAG_PATH}/*${prefix}${prefix_index}_dag.csv ${HOMEPATH}/${hierarchy} \
     -b ${budget} -i ${int_time} \
     --summary_path ${WORKPATH}/${SUMMARY_PATH} --intervention_path ${WORKPATH}/${INTERVENTION_PATH} \
-    --input_code ${prefix}${prefix_index} \
-    --fixed_budget # specify for heuristic budget. Remove otherwise
+    --input_code ${prefix}${prefix_index}
+    #--fixed_budget # specify for heuristic budget. Remove otherwise

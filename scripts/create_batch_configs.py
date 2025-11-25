@@ -10,6 +10,7 @@ import sys
 import json
 import random
 from copy import deepcopy
+from pdb import set_trace
 
 CONFIG_PATH = "../work/configs" # where config files are outputted, by default
 
@@ -56,7 +57,7 @@ def generateConfigs(config, sims=None, alpha_S=None, alpha_LD=None, intervention
         prefix_index = "_"+str(i)
         batch_config = {
             "network_specific_input" : deepcopy(config['input']),
-            "random_seed": random.randrange(2**31),
+            "random_seed": config['random_seed'], #random.randrange(2**31),
             "model_parameters" : deepcopy(config['parameters']['model_parameters']),
             "simulation_parameters" : deepcopy(config['parameters']['simulation_parameters']),
             "simulation_output_prefix": prefix+prefix_index

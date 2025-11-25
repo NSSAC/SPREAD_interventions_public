@@ -142,6 +142,9 @@ def rounding(x, y, z, denom, fixed_budget=None):
     
     #round x values to X
     if fixed_budget is None:
+        gs = []
+        vs = []
+        ints = []
         count = 0
         frac_k = 1.0/(2*denom)
         print("Threshold: "+str(frac_k))
@@ -153,8 +156,11 @@ def rounding(x, y, z, denom, fixed_budget=None):
                count = count+1
             else:
                X[key] = 0
+            gs.append(key)
+            vs.append(val)
+            ints.append(X[key])
+        df = pd.DataFrame({'group': gs, 'intervene': ints, 'val': vs})
         print("X rounded to 1: "+str(count))
-
     else:
         # Heuristic algorithm; guarantees interventions 
         # at a specified no. of groups, rather than those that pass threshold
@@ -173,11 +179,9 @@ def rounding(x, y, z, denom, fixed_budget=None):
                 X[key] = 0
         print('Heuristic applied')
         print(X)
+        df = pd.DataFrame()
 
-    return X, Y, Z
-
-
-
+    return X, Y, Z, df
 
 #LP for group interventions
 def prepareLP_group(input_file, budget_groups, int_time, l, group, hierarchy_file, 
@@ -252,20 +256,20 @@ def prepareLP_group(input_file, budget_groups, int_time, l, group, hierarchy_fil
         # use gm to round instead
         gm_val = gm(pd.read_csv(input_file), pd.read_csv(hierarchy_file))
         print("GM value: "+str(gm_val))
-        X,Y,Z = rounding(x,y,z, gm_val, fixed_budget=fixed_budget)
+        X,Y,Z,full_info = rounding(x,y,z, gm_val, fixed_budget=fixed_budget)
     else:
-        X,Y,Z = rounding(x,y,z, no_groups, fixed_budget=fixed_budget)
+        X,Y,Z,full_info = rounding(x,y,z, no_groups, fixed_budget=fixed_budget)
     r = m.runtime
     print("Optimizer runtime: "+str(r))
     w = m.work
     print("Optimizer work time: "+str(w))
     m.dispose()
     if runtime:
-        return X,Y,Z, no_groups, LP_objValue, M, lp_budget, sim_id, gm_val, r, w # output runtime if specified
+        return X,Y,Z, no_groups, LP_objValue, M, lp_budget, sim_id, gm_val, r, w, full_info # output runtime if specified
     else:
         return X,Y,Z, no_groups, LP_objValue, M, lp_budget, sim_id, gm_val # added: max sim_id, gm_val, runtime, work
 
-def outputGenerator(X,Y,Z,no_groups,LP_objValue, M, int_time, budget_given, inputcode, outpath):
+def outputGenerator(X,Y,Z,no_groups,LP_objValue, M, int_time, budget_given, inputcode, outpath, full_info=None):
     
     # write to intervention file
     filename = outpath+"/"+str(inputcode)+"/"+ \
@@ -274,7 +278,7 @@ def outputGenerator(X,Y,Z,no_groups,LP_objValue, M, int_time, budget_given, inpu
         os.mkdir(outpath+"/"+str(inputcode))
         # CAREFUL: this is a race condition! This is bypassed using mkdir in pipe_sim.sbatch
     fq = open(filename, 'w')
-    fq.write("group,time\n")
+    fq.write("group,time,xval\n")
     budget_used = 0
     for key in X.keys():
         if X[key] == 1:
@@ -287,6 +291,11 @@ def outputGenerator(X,Y,Z,no_groups,LP_objValue, M, int_time, budget_given, inpu
            algo_value += 1
     algo_value = algo_value/M # algorithmic obj value: average number of infected nodes across all simulations
     print("Algorithm objective value "+str(algo_value))
+
+    if full_info is not None:
+        filename = outpath+"/"+str(inputcode)+"/"+ \
+            f"comp_I{str(int_time)}-B{str(budget_given)}.csv" #str(r)+"_"+str(r2)+"_"+ 
+        full_info[full_info.group!=-1].to_csv(filename, index=False)
     return budget_used, algo_value, filename
 
 if __name__ == "__main__":
@@ -332,9 +341,9 @@ if __name__ == "__main__":
     for budget, int_time in product(args.budgets, args.intervention_times):
         print("budget, int_time: "+str(budget)+","+str(int_time))
         # output string for summary
-        X,Y,Z, no_groups, LP_objValue, M, lp_budget, max_sim, gm_val, runtime, work = prepareLP_group(args.input_file, budget, int_time,0, group, args.hierarchy_file, 
-                                                                                                        use_gm=(not args.no_gm), fixed_budget=(budget if args.fixed_budget else None))
-        budget_used, algo_value, int_filename = outputGenerator(X,Y,Z,no_groups,LP_objValue, M, int_time, budget, args.input_code,  outpath=args.intervention_path)
+        X,Y,Z, no_groups, LP_objValue, M, lp_budget, max_sim, gm_val, runtime, work, full_info = prepareLP_group(args.input_file, budget, int_time,0, group, 
+        args.hierarchy_file, use_gm=(not args.no_gm), fixed_budget=(budget if args.fixed_budget else None))
+        budget_used, algo_value, int_filename = outputGenerator(X,Y,Z,no_groups,LP_objValue, M, int_time, budget, args.input_code,  outpath=args.intervention_path, full_info=full_info)
         #budget_given is used as name for lp_budget due to change in notion
         
         output = f"{args.input_code},{max_sim+1},{budget},{int_time},{budget_used},{lp_budget},{algo_value},{LP_objValue},{gm_val},{runtime},{work},{args.input_file},{int_filename}\n"
