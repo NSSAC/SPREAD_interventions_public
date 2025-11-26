@@ -16,6 +16,18 @@ function bd(){
     collect
 }
 
+function ph(){
+    # this is just for record. this function cannot be called directly
+    master.sh prepare_all_pipelines ph1 ph2
+    ./run.sh
+    python ../scripts/fill_gaps.py
+    python ../scripts/gather_outputs.py -i
+    python ../scripts/second_pipeline.py
+    ./run.sh
+    python ../scripts/gather_outputs.py -s
+    collect
+}
+
 function collect(){
     cd ..
     (
