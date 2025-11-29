@@ -38,7 +38,10 @@ def generate_intervention_configs(df_int: pd.DataFrame) -> list[dict]:
 	Generates a list of new dicts corresponding to simulator config files,
 	with one config file per intervention output
 	'''
-	df_int = df_int.drop_duplicates('int_filename').reset_index(drop=True)
+	df_int.int_filename = df_int.int_filename.fillna('')
+	# AA: removed this for now.
+	#df_int = df_int.drop_duplicates('int_filename').reset_index(drop=True)
+	df_int = df_int.drop_duplicates().reset_index(drop=True)
 	 # want unique intervention files
 	
 	config_dict = collect_configs(INPUTPATH)
