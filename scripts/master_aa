@@ -7,7 +7,7 @@ CONFIGFILEPATH="../input/config_files"
 function bd(){
     # this is just for record. this function cannot be called directly
     #master.sh prepare_all_pipelines bd1 bd2 bd3 bd4 ph1 ph2 ph3 ph4 vn1 vn2 vn3 vn4 id1 id2 id3 id4 th1 th2 th3 th4
-    master.sh prepare_all_pipelines bd_startmonth3_ bd_startmonth5_
+    master.sh prepare_all_pipelines bd_startmonth3_ bd_startmonth7_
     ./run.sh
     python ../scripts/fill_gaps.py
     python ../scripts/gather_outputs.py -i
