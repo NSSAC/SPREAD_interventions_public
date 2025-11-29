@@ -517,7 +517,7 @@ if __name__ == "__main__":
     parser.add_argument("--no_time", action="store_true", help="Do not display time taken")
     parser.add_argument("-s","--summary", action="store_true", 
             help="Display summary of results. If no output path specified, prints out directly")
-    parser.add_argument("-o", "--outpath", default="",
+    parser.add_argument("-o", "--outpath", default="./",
             help="Default directory for output")
     parser.add_argument("-p", "--dag_outpath",
             help="Default directory for DAG file output, if different")

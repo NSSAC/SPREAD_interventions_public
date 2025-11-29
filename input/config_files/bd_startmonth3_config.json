@@ -1,0 +1,29 @@
+{
+    "input": {
+        "network": "../input/networks/BD",
+        "hierarchy": "../input/networks/BD/hierarchy.tree",
+        "seeding": "../input/seeding/seed_BD_Rajshahi.csv",
+        "intervention": ""
+    },
+    "batches": 1,
+    "simulations": 100,
+    "parameters": {
+        "model_parameters": {
+            "suitability_thresh": 0,
+            "exposure_delay": 3,
+            "alpha_S": 500,
+            "alpha_L": 0.2,
+            "alpha_LD": 50,
+            "kernel": "moore",
+            "kernel_parameters": 1
+        },
+        "simulation_parameters": {
+            "time_steps": 24,
+            "start_month": 3
+        }
+    },
+    "budget": [1,2,3,4],
+    "intervention_time": [1, 3, 6],
+    "random_seed": 1,
+    "prefix": "BD3_"
+}
