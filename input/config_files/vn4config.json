@@ -1,0 +1,29 @@
+{
+    "input": {
+        "network": "../input/networks/VN",
+        "hierarchy": "../input/networks/VN/hierarchy.tree",
+        "seeding": "../input/seeding/seed_VN_north.csv",
+        "intervention": ""
+    },
+    "batches": 1,
+    "simulations": 100,
+    "parameters": {
+        "model_parameters": {
+            "suitability_thresh": 0,
+            "exposure_delay": 3,
+            "alpha_S": 300,
+            "alpha_L": 0.2,
+            "alpha_LD": 200,
+            "kernel": "moore",
+            "kernel_parameters": 1
+        },
+        "simulation_parameters": {
+            "time_steps": 24,
+            "start_month": 5
+        }
+    },
+    "budget": [1,2,3,5,7],
+    "intervention_time": [1, 3,6,12, 18],
+    "random_seed": 1,
+    "prefix": "VN4_"
+}
