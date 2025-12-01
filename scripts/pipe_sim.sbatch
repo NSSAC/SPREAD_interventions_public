@@ -32,7 +32,7 @@ else
 fi
 
 echo "Running Simulator..."
-python ${HOMEPATH}/run_spread_v2.py ${WORKPATH}/${CONFIG_PATH}/${prefix}${prefix_index}.json --dag_type ${dag_type:-1} -s -p ${WORKPATH}/${DAG_PATH} --summary_out ${WORKPATH}/${SIM_SUMMARY_PATH} #--suppress_outfile
+python ${HOMEPATH}/run_spread_v2.py ${WORKPATH}/${CONFIG_PATH}/${prefix}${prefix_index}.json --dag_type ${dag_type:-1} -s -p ${WORKPATH}/${DAG_PATH} --summary_out ${WORKPATH}/${SIM_SUMMARY_PATH} --suppress_outfile
 echo "Done. Preparing intervention directory"
 mkdir -p ${WORKPATH}/${INTERVENTION_PATH}/${prefix}${prefix_index}
 
