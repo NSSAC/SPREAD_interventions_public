@@ -256,10 +256,10 @@ def prepareLP_group(input_file, budget_groups, int_time, l, group, hierarchy_fil
         # use gm to round instead
         gm_val = gm(pd.read_csv(input_file), pd.read_csv(hierarchy_file))
         print("GM value: "+str(gm_val))
-        X,Y,Z,full_info = rounding(x,y,z, gm_val, fixed_budget=fixed_budget)
-    else:
-        #X,Y,Z,full_info = rounding(x,y,z, no_groups, fixed_budget=fixed_budget)
+        #X,Y,Z,full_info = rounding(x,y,z, gm_val, fixed_budget=fixed_budget)
         X,Y,Z,full_info = rounding(x,y,z, 2, fixed_budget=fixed_budget)
+    else:
+        X,Y,Z,full_info = rounding(x,y,z, no_groups, fixed_budget=fixed_budget)
     r = m.runtime
     print("Optimizer runtime: "+str(r))
     w = m.work
