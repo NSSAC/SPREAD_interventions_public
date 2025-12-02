@@ -5,21 +5,21 @@ WORKPATH="../work"
 CONFIGFILEPATH="../input/config_files"
 
 
-function summaries_budget_violation(){
-    # this is just for record. this function cannot be called directly
-    master.sh prepare_all_pipelines bd1 bd2 bd3 bd4 ph1 ph2 ph3 ph4 vn1 vn2 vn3 vn4 id1 id2 id3 id4 th1 th2 th3 th4
-    #master.sh prepare_all_pipelines bd_startmonth3_ bd_startmonth7_
-    ./run.sh
-    python ../scripts/gather_outputs.py -i
-    # Run with --suppress_output commented for the last figure in pipe_sim.sbatch
-    python ../scripts/second_pipeline.py
-    ./run.sh
-    python ../scripts/gather_outputs.py -s
-    # get sim_summaries.csv
-    # one for threshold = gm
-    # another for threshold = no_groups
-   
-}
+## function summaries_budget_violation(){
+##     # this is just for record. this function cannot be called directly
+##     master.sh prepare_all_pipelines bd1 bd2 bd3 bd4 ph1 ph2 ph3 ph4 vn1 vn2 vn3 vn4 id1 id2 id3 id4 th1 th2 th3 th4
+##     #master.sh prepare_all_pipelines bd_startmonth3_ bd_startmonth7_
+##     ./run.sh
+##     python ../scripts/gather_outputs.py -i
+##     # Run with --suppress_output commented for the last figure in pipe_sim.sbatch
+##     python ../scripts/second_pipeline.py
+##     ./run.sh
+##     python ../scripts/gather_outputs.py -s
+##     # get sim_summaries.csv
+##     # one for threshold = gm
+##     # another for threshold = no_groups
+##    
+## }
 
 
 function bd(){
