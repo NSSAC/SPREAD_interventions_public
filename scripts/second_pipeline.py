@@ -14,7 +14,7 @@ WORKPATH="../work"
 CONFIG_PATH = 'configs'
 SIM_SUMMARY_PATH="sim_summaries"
 DAG_PATH="dags"
-RESULTSPATH='results'
+RESULTSPATH='../results'
 # Where files are saved, relative to WORKPATH:
 INPUTPATH= "../input/config_files"
 

@@ -1,9 +1,9 @@
 #!/bin/bash
 # SLURM JOB SCRIPT OPTIONS:
 #SBATCH --time=06:00:00
-##SBATCH -A nssac_students
+#SBATCH -A nssac_students
 #SBATCH -A bii_nssac
-#SBATCH -p bii
+##SBATCH -p bii
 # ntasks and memory handled by script
 
 # Load any modules you require:
@@ -33,5 +33,5 @@ python ${HOMEPATH}/algorithm_groupint_general_v2.py \
     ${WORKPATH}/${DAG_PATH}/*${prefix}${prefix_index}_dag.csv ${HOMEPATH}/${hierarchy} \
     -b ${budget} -i ${int_time} \
     --summary_path ${WORKPATH}/${SUMMARY_PATH} --intervention_path ${WORKPATH}/${INTERVENTION_PATH} \
-    --input_code ${prefix}${prefix_index}
+    --input_code ${prefix}${prefix_index} # --no_gm
     #--fixed_budget # specify for heuristic budget. Remove otherwise

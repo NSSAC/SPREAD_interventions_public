@@ -22,7 +22,7 @@ WORKPATH='../work'
 SUMMARY_PATH=f'{WORKPATH}/summaries'
 INTERVENTION_PATH=f'{WORKPATH}/interventions'
 SIM_SUMMARY_PATH=f'{WORKPATH}/sim_summaries'
-OUTPATH='results'
+OUTPATH='../results'
 
 NETWORK_NODE_COUNT = {
     'BD':211,
@@ -67,6 +67,7 @@ def combine_sim_summaries(path=SIM_SUMMARY_PATH, output=False, separate_headers=
     else:
         # One header file, multiple one-line files
         csv_string = subprocess.check_output(f"cat {path}/*.csv", shell=True, text=True) # use shell command (cat) to combine files
+        # Note: if script is not run from the scripts directory, this command will fail
         df_out = pd.read_csv(StringIO(csv_string))
         df_out['filename'] = [s for s in sorted(glob(f'{path}/*.csv')) if s.endswith('summary.csv')]
         # ignores 0header.csv

@@ -258,6 +258,7 @@ def prepareLP_group(input_file, budget_groups, int_time, l, group, hierarchy_fil
         print("GM value: "+str(gm_val))
         X,Y,Z,full_info = rounding(x,y,z, gm_val, fixed_budget=fixed_budget)
     else:
+        gm_val=-1 # placeholder
         X,Y,Z,full_info = rounding(x,y,z, no_groups, fixed_budget=fixed_budget)
     r = m.runtime
     print("Optimizer runtime: "+str(r))
